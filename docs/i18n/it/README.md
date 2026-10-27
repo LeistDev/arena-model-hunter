@@ -171,7 +171,7 @@ Il progetto è pensato per **esperimenti personali e apprendimento**. Automatizz
 
 ## 📄 Licenza
 
-[MIT](LICENSE) — software libero: puoi usarlo, studiarlo, condividerlo e modificarlo. Se distribuisci il programma o una versione modificata, deve restare sotto GPL e il codice sorgente deve rimanere aperto. Nessuna garanzia.
+[MIT](LICENSE) — software libero: puoi usarlo, studiarlo, condividerlo e modificarlo. Se distribuisci il programma o una versione modificata, devi mantenervi l'avviso di copyright e il testo della licenza MIT. Nessuna garanzia.
 
 Copyright (C) 2026 contributori di arena model hunter.
 

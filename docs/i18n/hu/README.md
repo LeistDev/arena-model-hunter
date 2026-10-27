@@ -171,7 +171,7 @@ A projekt **személyes kísérletezésre és tanulásra** készült. Harmadik f�
 
 ## 📄 Licenc
 
-[MIT](LICENSE) — szabad szoftver: használható, tanulmányozható, megosztható és módosítható. Ha a programot vagy módosított változatát terjeszted, annak GPL alatt kell maradnia, és a forráskódnak nyitottnak kell lennie. Nincs garancia.
+[MIT](LICENSE) — szabad szoftver: használható, tanulmányozható, megosztható és módosítható. Ha a programot vagy módosított változatát terjeszted, meg kell őrizned mellette a szerzői jogi közleményt és az MIT-licenc szövegét. Nincs garancia.
 
 Copyright (C) 2026 az arena model hunter közreműködői.
 

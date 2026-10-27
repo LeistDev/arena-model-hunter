@@ -171,7 +171,7 @@ Ang proyektong ito ay para sa **personal na eksperimento at pag-aaral**. Ina-aut
 
 ## 📄 Lisensya
 
-[MIT](LICENSE) — libreng software: maaaring gamitin, pag-aralan, ibahagi at baguhin. Kung ipapamahagi mo ang programa o binagong bersyon, dapat itong manatili sa ilalim ng GPL at manatiling bukas ang source code. Walang garantiya.
+[MIT](LICENSE) — libreng software: maaaring gamitin, pag-aralan, ibahagi at baguhin. Kung ipapamahagi mo ang programa o binagong bersyon, dapat mong isama ang paunawa ng karapatang-ari at ang teksto ng lisensyang MIT. Walang garantiya.
 
 Copyright (C) 2026 mga kontribyutor ng arena model hunter.
 

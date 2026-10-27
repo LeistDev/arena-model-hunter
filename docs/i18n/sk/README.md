@@ -171,7 +171,7 @@ Projekt vznikol pre **vlastné experimenty a vzdelávanie**. Automatizuje cudzí
 
 ## 📄 Licencia
 
-[MIT](LICENSE) — slobodný softvér: môžete ho používať, študovať, šíriť a meniť. Ak šírite program alebo upravenú verziu, musí zostať pod GPL a zdrojový kód musí zostať otvorený. Bez záruky.
+[MIT](LICENSE) — slobodný softvér: môžete ho používať, študovať, šíriť a meniť. Ak šírite program alebo upravenú verziu, musíte pri nej zachovať oznámenie o autorských právach a text licencie MIT. Bez záruky.
 
 Copyright (C) 2026 prispievatelia arena model hunter.
 

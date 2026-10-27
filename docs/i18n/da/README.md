@@ -171,7 +171,7 @@ Projektet er lavet til **personlige eksperimenter og læring**. Det automatisere
 
 ## 📄 Licens
 
-[MIT](LICENSE) — fri software: du må bruge, undersøge, dele og ændre det. Hvis du distribuerer programmet eller en ændret version, skal det forblive under GPL, og kildekoden skal forblive åben. Der er ingen garanti.
+[MIT](LICENSE) — fri software: du må bruge, undersøge, dele og ændre det. Hvis du distribuerer programmet eller en ændret version, skal du bevare ophavsretsmeddelelsen og MIT-licensteksten sammen med det. Der er ingen garanti.
 
 Copyright (C) 2026 bidragydere til arena model hunter.
 

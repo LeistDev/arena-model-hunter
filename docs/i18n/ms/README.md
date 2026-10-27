@@ -171,7 +171,7 @@ Projek ini untuk **eksperimen peribadi dan pembelajaran**. Ia mengautomasikan la
 
 ## 📄 Lesen
 
-[MIT](LICENSE) — perisian bebas: boleh digunakan, dikaji, dikongsi dan diubah. Jika anda mengedarkan program atau versi yang diubah, ia mesti kekal di bawah GPL dan kod sumber mesti kekal terbuka. Tiada jaminan.
+[MIT](LICENSE) — perisian bebas: boleh digunakan, dikaji, dikongsi dan diubah. Jika anda mengedarkan program atau versi yang diubah, anda mesti sertakan notis hak cipta dan teks lesen MIT bersamanya. Tiada jaminan.
 
 Copyright (C) 2026 penyumbang arena model hunter.
 

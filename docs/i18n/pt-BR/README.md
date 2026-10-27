@@ -171,7 +171,7 @@ Este projeto é para **experimentos pessoais e aprendizado**. Ele automatiza um 
 
 ## 📄 Licença
 
-[MIT](LICENSE) — software livre: você pode usar, estudar, compartilhar e modificar. Se distribuir o programa ou uma versão modificada, ela deve continuar sob a GPL e o código-fonte deve permanecer aberto. Não há garantias.
+[MIT](LICENSE) — software livre: você pode usar, estudar, compartilhar e modificar. Se distribuir o programa ou uma versão modificada, você deve manter o aviso de copyright e o texto da licença MIT junto a ela. Não há garantias.
 
 Copyright (C) 2026 colaboradores do arena model hunter.
 

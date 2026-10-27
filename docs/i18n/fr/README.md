@@ -171,7 +171,7 @@ Ce projet est destiné à des **expérimentations personnelles et à l'apprentis
 
 ## 📄 Licence
 
-[MIT](LICENSE) — logiciel libre : vous pouvez l'utiliser, l'étudier, le partager et le modifier. Si vous distribuez le programme ou une version modifiée, il doit rester sous GPL et le code source doit rester ouvert. Aucune garantie.
+[MIT](LICENSE) — logiciel libre : vous pouvez l'utiliser, l'étudier, le partager et le modifier. Si vous distribuez le programme ou une version modifiée, vous devez y joindre la mention de copyright et le texte de la licence MIT. Aucune garantie.
 
 Copyright (C) 2026 contributeurs d'arena model hunter.
 

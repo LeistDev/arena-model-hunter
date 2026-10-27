@@ -43,10 +43,25 @@ jobs:
 
       - name: Check license
         run: |
+          set -euo pipefail
           head -1 LICENSE | grep -q "MIT License"
-          grep -q "MIT" README.md
-          grep -rl "license-GPL" --include="*.md" . && exit 1 || true
-          grep -q "SPDX-License-Identifier: MIT" main.py
+          grep -q "license-MIT" README.md
+          for f in main.py ui.py flow.py arena_login.py i18n.py; do
+            grep -q "SPDX-License-Identifier: MIT" "$f" || { echo "$f: missing MIT SPDX header"; exit 1; }
+          done
+          python - <<'PY'
+          import os
+          # the project is MIT-only: no GPL claim may sneak back into any README
+          targets = ["README.md"] + [
+              os.path.join("docs/i18n", c, "README.md")
+              for c in sorted(os.listdir("docs/i18n"))
+          ]
+          for path in targets:
+              text = open(path, encoding="utf-8").read()
+              assert "[MIT](LICENSE)" in text, f"{path}: MIT licence link missing"
+              assert "GPL" not in text, f"{path}: GPL claim present"
+          print("licence consistency OK:", len(targets))
+          PY
 
       - name: No session artefacts committed
         run: |

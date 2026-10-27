@@ -171,7 +171,7 @@ Dự án dành cho **thử nghiệm cá nhân và học tập**. Nó tự độn
 
 ## 📄 Giấy phép
 
-[MIT](LICENSE) — phần mềm tự do: bạn có thể dùng, nghiên cứu, chia sẻ và sửa đổi. Nếu phân phối chương trình hoặc bản đã sửa, nó phải tiếp tục theo GPL và mã nguồn phải để mở. Không có bảo hành.
+[MIT](LICENSE) — phần mềm tự do: bạn có thể dùng, nghiên cứu, chia sẻ và sửa đổi. Nếu phân phối chương trình hoặc bản đã sửa, bạn phải giữ lại thông báo bản quyền và nội dung giấy phép MIT. Không có bảo hành.
 
 Copyright (C) 2026 những người đóng góp cho arena model hunter.
 

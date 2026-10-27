@@ -171,7 +171,7 @@ Projekt powstał do **własnych eksperymentów i nauki**. Automatyzuje zewnętrz
 
 ## 📄 Licencja
 
-[MIT](LICENSE) — wolne oprogramowanie: możesz go używać, badać, udostępniać i zmieniać. Jeśli rozpowszechniasz program lub zmienioną wersję, musi pozostać na licencji GPL, a kod źródłowy otwarty. Brak gwarancji.
+[MIT](LICENSE) — wolne oprogramowanie: możesz go używać, badać, udostępniać i zmieniać. Jeśli rozpowszechniasz program lub zmienioną wersję, musisz dołączyć do niej notę o prawach autorskich i treść licencji MIT. Brak gwarancji.
 
 Copyright (C) 2026 współtwórcy arena model hunter.
 

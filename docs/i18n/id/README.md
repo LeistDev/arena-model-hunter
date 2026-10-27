@@ -171,7 +171,7 @@ Proyek ini dibuat untuk **eksperimen pribadi dan belajar**. Aplikasi mengotomati
 
 ## 📄 Lisensi
 
-[MIT](LICENSE) — perangkat lunak bebas: boleh dipakai, dipelajari, dibagikan, dan diubah. Jika Anda menyebarkan program ini atau versi modifikasinya, program harus tetap di bawah GPL dan kode sumbernya tetap terbuka. Tidak ada jaminan.
+[MIT](LICENSE) — perangkat lunak bebas: boleh dipakai, dipelajari, dibagikan, dan diubah. Jika Anda menyebarkan program ini atau versi modifikasinya, Anda harus menyertakan pemberitahuan hak cipta dan teks lisensi MIT. Tidak ada jaminan.
 
 Copyright (C) 2026 para kontributor arena model hunter.
 

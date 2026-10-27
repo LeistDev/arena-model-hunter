@@ -184,7 +184,7 @@ This project is for **personal experimentation and education**. It automates a t
 
 ## 📄 License
 
-[MIT](LICENSE) — free software: you may use, study, share and modify it. If you distribute it or a modified version, it must stay under the GPL and the source must remain open. There is no warranty.
+[MIT](LICENSE) — free software: you may use, study, share and modify it. If you distribute it or a modified version, you must keep the copyright notice and the MIT permission text with it. There is no warranty.
 
 Copyright (C) 2026 arena model hunter contributors.
 
