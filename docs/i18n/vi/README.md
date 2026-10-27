@@ -15,28 +15,28 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
 
 </div>
 
 ---
 
 ```
-   ╭──────────────────────────────────────────────────────────────────╮
-   │                                                                  │
-   │  ✦  arena model hunter                                           │
-   │     arena.ai automation · v1.0.0                                 │
-   │                                                                  │
-   │  ● Arena account connected  ·  you@example.com                   │
-   │  ◷ mode: single-threaded  ·  English                             │
-   │                                                                  │
-   │  ▸ Start                                                ready    │
-   │    Settings                                   account & exit    │
-   │    Exit                                                          │
-   │                                                                  │
-   │ ↑ ↓  select    ↵  open    q  quit                                │
-   │                                                                  │
-   ╰──────────────────────────────────────────────────────────────────╯
+   +------------------------------------------------------------------+
+   |                                                                  |
+   |  *  arena model hunter                                           |
+   |     arena.ai automation - v1.0.0                                 |
+   |                                                                  |
+   |  o Arena account connected  .  you@example.com                   |
+   |  ~ mode: single-threaded  .  English                             |
+   |                                                                  |
+   |  > Start                                                ready    |
+   |    Settings                                   account & exit     |
+   |    Exit                                                          |
+   |                                                                  |
+   | arrows select    Enter open    q quit                            |
+   |                                                                  |
+   +------------------------------------------------------------------+
 ```
 
 ## 🎯 Vì sao công cụ này tồn tại
@@ -111,16 +111,16 @@ Cài đặt nằm trong `~/.arena-model-hunter/config.json`:
 
 ⚠️ **Không giới hạn số cuộc mặc định tắt, và cảnh báo này không phải cho có.** Khi bật, `Start` thôi kiểm tra khoảng 1–100 và nhận bất kỳ số nào — `250`, `1000`. Mỗi cuộc là hai tab, nên con số lớn nghĩa là một loạt yêu cầu song song dồn tới arena.ai: đúng kiểu mà giới hạn tần suất và captcha sinh ra để chặn, kèm nguy cơ thật về việc tài khoản bị hạn chế. Chỉ bật khi bạn chấp nhận điều đó, và giữ chế độ một luồng; mọi giá trị trên 100 sẽ hỏi xác nhận lần hai với con số chính xác trước khi mở bất cứ thứ gì.
 
-## 🔐 How signing in works
+## 🔐 Cách hoạt động của việc đăng nhập
 
-1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
-2. You click `Log In` → enter your email → `Continue with email`.
-   - Existing account → enter the password → `Log In`.
-   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
-3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
-4. It saves `session.json` + `state.json` and **closes the browser**.
+1. Một cửa sổ Chromium **thật** mở ra với hồ sơ lưu bền (`~/.arena-model-hunter/profile`) — Cloudflare từ chối trình duyệt headless, nên ứng dụng không bao giờ dùng.
+2. Bạn bấm `Log In` → nhập email → `Continue with email`.
+   - Đã có tài khoản → nhập mật khẩu → `Log In`.
+   - Email mới → bước nhập tên có thể bỏ qua → thư có liên kết được gửi tới → dán vào thanh địa chỉ (`Ctrl+L`, `Ctrl+V`, Enter) → tạo mật khẩu.
+3. Ứng dụng kiểm tra trang mỗi 1,5 giây và nhận biết đăng nhập thành công qua ba dấu hiệu: email xuất hiện ở thanh bên, cookie `arena-auth-*` xuất hiện, nút `Log In` biến mất.
+4. Sau đó nó lưu `session.json` + `state.json` và **đóng trình duyệt**.
 
-The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+Trang luôn mở ở **giao diện tối** (trình duyệt khởi chạy với `prefers-color-scheme: dark`, và arena.ai tuân theo thiết lập này).
 
 ## ⚡ Chế độ đơn luồng và đa luồng
 
@@ -131,31 +131,31 @@ The site always opens in **dark theme** (the browser is launched with `prefers-c
 
 Ở chế độ đa luồng, Arena nhận nhiều yêu cầu cùng lúc nên dễ gặp giới hạn và captcha hơn. Nếu điều đó xảy ra, hãy quay lại chế độ đơn luồng.
 
-## 🗂️ Project structure
+## 🗂️ Cấu trúc dự án
 
 ```
 arena-model-hunter/
-├── main.py           # menu, settings, scenarios
-├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
-├── arena_login.py    # browser, sign-in, session detection
-├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
-├── i18n.py           # UI translations (en / ru / zh)
+├── main.py             # menu, cài đặt, kịch bản
+├── ui.py               # giao diện terminal: khung, alt-screen, đọc phím, thay đổi kích thước
+├── arena_login.py      # trình duyệt, đăng nhập, nhận diện phiên, cấu hình
+├── flow.py             # quy trình Arena ↔ lm.ikale.io, Verify, đổi tên
+├── i18n.py             # bản dịch giao diện (en / ru / zh)
 ├── requirements.txt
 ├── run.bat / run.sh
-├── .github/workflows/  # CI: lint + translation checks
+├── .github/workflows/  # CI: lint và kiểm tra bản dịch
 ├── LICENSE
-└── docs/i18n/        # this README in 30 languages
+└── docs/i18n/          # README này bằng 30 ngôn ngữ
 ```
 
-## 🌍 Environment variables
+## 🌍 Biến môi trường
 
-| Variable | Default | Purpose |
+| Biến | Mặc định | Công dụng |
 |---|---|---|
-| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
-| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
-| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
-| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
-| `ARENA_URL` | `https://arena.ai/` | start URL |
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | thư mục hồ sơ và phiên |
+| `ARENA_HELPER_HOME` | — | tên cũ của biến, vẫn được hỗ trợ |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | tự điền biểu mẫu (không bao giờ lưu) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | số giây chờ đăng nhập |
+| `ARENA_URL` | `https://arena.ai/` | URL khởi đầu |
 
 ## 🧰 Câu hỏi thường gặp
 
@@ -171,10 +171,7 @@ Dự án dành cho **thử nghiệm cá nhân và học tập**. Nó tự độn
 
 ## 📄 Giấy phép
 
-[MIT](LICENSE) — làm gì tuỳ bạn, không bảo hành.
+[GNU General Public License v3.0](LICENSE) — phần mềm tự do: bạn có thể dùng, nghiên cứu, chia sẻ và sửa đổi. Nếu phân phối chương trình hoặc bản đã sửa, nó phải tiếp tục theo GPL và mã nguồn phải để mở. Không có bảo hành.
 
-<div align="center">
+Copyright (C) 2026 những người đóng góp cho arena model hunter.
 
-**[⬆ Lên đầu](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
-
-</div>

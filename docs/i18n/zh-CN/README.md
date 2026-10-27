@@ -15,28 +15,28 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
 
 </div>
 
 ---
 
 ```
-   ╭──────────────────────────────────────────────────────────────────╮
-   │                                                                  │
-   │  ✦  arena model hunter                                           │
-   │     arena.ai automation · v1.0.0                                 │
-   │                                                                  │
-   │  ● Arena account connected  ·  you@example.com                   │
-   │  ◷ mode: single-threaded  ·  English                             │
-   │                                                                  │
-   │  ▸ Start                                                ready    │
-   │    Settings                                   account & exit    │
-   │    Exit                                                          │
-   │                                                                  │
-   │ ↑ ↓  select    ↵  open    q  quit                                │
-   │                                                                  │
-   ╰──────────────────────────────────────────────────────────────────╯
+   +------------------------------------------------------------------+
+   |                                                                  |
+   |  *  arena model hunter                                           |
+   |     arena.ai automation - v1.0.0                                 |
+   |                                                                  |
+   |  o Arena account connected  .  you@example.com                   |
+   |  ~ mode: single-threaded  .  English                             |
+   |                                                                  |
+   |  > Start                                                ready    |
+   |    Settings                                   account & exit     |
+   |    Exit                                                          |
+   |                                                                  |
+   | arrows select    Enter open    q quit                            |
+   |                                                                  |
+   +------------------------------------------------------------------+
 ```
 
 ## 🎯 为什么需要它
@@ -111,16 +111,16 @@ python main.py
 
 ⚠️ **「不限聊天数量」默认关闭，这个警告不是摆设。** 打开后，「开始」不再限制 1–100，而是接受任意数字——`250`、`1000`。每个对话要两个标签页，数字一大就意味着同时向 arena.ai 发出一大批请求：这正是限流和验证码存在的理由，账户被限制的风险是真实存在的。只有在你接受这个风险时才开启，并保持单线程模式；超过 100 时，脚本会先弹出一个写明数量的二次确认。
 
-## 🔐 How signing in works
+## 🔐 登录是怎么完成的
 
-1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
-2. You click `Log In` → enter your email → `Continue with email`.
-   - Existing account → enter the password → `Log In`.
-   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
-3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
-4. It saves `session.json` + `state.json` and **closes the browser**.
+1. 会打开一个**真实的** Chromium 窗口并使用持久化配置目录（`~/.arena-model-hunter/profile`）：Cloudflare 不接受无头浏览器，所以程序从不使用无头模式。
+2. 你点击 `Log In` → 输入邮箱 → `Continue with email`。
+   - 已有账号 → 输入密码 → `Log In`。
+   - 新邮箱 → 姓名这一步可以跳过 → 邮件里会收到链接 → 粘贴到地址栏（`Ctrl+L`、`Ctrl+V`、回车）→ 设置密码。
+3. 程序每 1.5 秒检查一次页面，通过三个信号确认登录成功：邮箱出现在侧边栏、出现 `arena-auth-*` cookie、`Log In` 按钮消失。
+4. 随后保存 `session.json` 和 `state.json`，并**关闭浏览器**。
 
-The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+站点始终以**深色主题**打开：浏览器以 `prefers-color-scheme: dark` 启动，arena.ai 会跟随这个设置。
 
 ## ⚡ 单线程与多线程
 
@@ -131,31 +131,31 @@ The site always opens in **dark theme** (the browser is launched with `prefers-c
 
 多线程模式下 Arena 会同时收到多个请求，更容易触发限流或验证码。如果出现这种情况，请切回单线程。
 
-## 🗂️ Project structure
+## 🗂️ 项目结构
 
 ```
 arena-model-hunter/
-├── main.py           # menu, settings, scenarios
-├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
-├── arena_login.py    # browser, sign-in, session detection
-├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
-├── i18n.py           # UI translations (en / ru / zh)
+├── main.py             # 菜单、设置、流程
+├── ui.py               # 终端界面：边框、备用屏幕、按键读取、窗口缩放
+├── arena_login.py      # 浏览器、登录、会话检测、配置
+├── flow.py             # Arena ↔ lm.ikale.io 流程、Verify、重命名
+├── i18n.py             # 界面翻译（en / ru / zh）
 ├── requirements.txt
 ├── run.bat / run.sh
-├── .github/workflows/  # CI: lint + translation checks
+├── .github/workflows/  # CI：代码检查与翻译校验
 ├── LICENSE
-└── docs/i18n/        # this README in 30 languages
+└── docs/i18n/          # 本 README 的 30 种语言版本
 ```
 
-## 🌍 Environment variables
+## 🌍 环境变量
 
-| Variable | Default | Purpose |
+| 变量 | 默认值 | 用途 |
 |---|---|---|
-| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
-| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
-| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
-| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
-| `ARENA_URL` | `https://arena.ai/` | start URL |
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | 配置目录与会话目录 |
+| `ARENA_HELPER_HOME` | — | 变量的旧名称，仍然有效 |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | 可选的表单自动填充（从不保存） |
+| `ARENA_LOGIN_TIMEOUT` | `900` | 等待登录的秒数 |
+| `ARENA_URL` | `https://arena.ai/` | 起始网址 |
 
 ## 🧰 常见问题
 
@@ -171,10 +171,7 @@ arena-model-hunter/
 
 ## 📄 许可证
 
-[MIT](LICENSE) — 随意使用，不提供任何担保。
+[GNU General Public License v3.0](LICENSE) — 自由软件：可以自由使用、研究、分享和修改。分发本程序或修改版本时必须继续遵循 GPL，源码也必须保持公开。不提供任何担保。
 
-<div align="center">
+Copyright (C) 2026 arena model hunter 贡献者。
 
-**[⬆ 回到顶部](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
-
-</div>

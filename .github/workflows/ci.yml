@@ -41,6 +41,31 @@ jobs:
           print(f"translations OK: {len(_STRINGS)} keys x {len(LANGS)} languages")
           PY
 
+      - name: Check license
+        run: |
+          head -2 LICENSE | grep -q "GNU GENERAL PUBLIC LICENSE"
+          grep -q "GNU General Public License v3.0" README.md
+          grep -rl "license-MIT" --include="*.md" . && exit 1 || true
+          grep -q "SPDX-License-Identifier: GPL-3.0" main.py
+
+      - name: Check the screenshot art stays ASCII
+        run: |
+          python - <<'PY'
+          import os, re
+          targets = ["README.md"] + [
+              os.path.join("docs/i18n", c, "README.md")
+              for c in sorted(os.listdir("docs/i18n"))
+          ]
+          for path in targets:
+              text = open(path, encoding="utf-8").read()
+              start = text.index("   +---")
+              block = text[start:text.index("```", start)]
+              assert all(ord(ch) < 128 for ch in block), f"{path}: art is not ASCII"
+              widths = {len(line) for line in block.split("\n") if line}
+              assert widths == {71}, f"{path}: uneven frame {sorted(widths)}"
+          print("screenshot art OK:", len(targets))
+          PY
+
       - name: Check localized READMEs
         run: |
           python - <<'PY'

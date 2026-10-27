@@ -9,6 +9,16 @@
   3. Скрипт сам опрашивает страницу и понимает, что вход выполнен,
      сохраняет сессию и закрывает браузер.
 """
+# arena model hunter — model hunter for arena.ai
+# Copyright (C) 2026 arena model hunter contributors
+# SPDX-License-Identifier: GPL-3.0
+#
+# This program is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License, version 3, as published
+# by the Free Software Foundation. It is distributed in the hope that it will
+# be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for details.
+
 
 from __future__ import annotations
 

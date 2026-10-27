@@ -15,28 +15,28 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
 
 </div>
 
 ---
 
 ```
-   ╭──────────────────────────────────────────────────────────────────╮
-   │                                                                  │
-   │  ✦  arena model hunter                                           │
-   │     arena.ai automation · v1.0.0                                 │
-   │                                                                  │
-   │  ● Arena account connected  ·  you@example.com                   │
-   │  ◷ mode: single-threaded  ·  English                             │
-   │                                                                  │
-   │  ▸ Start                                                ready    │
-   │    Settings                                   account & exit    │
-   │    Exit                                                          │
-   │                                                                  │
-   │ ↑ ↓  select    ↵  open    q  quit                                │
-   │                                                                  │
-   ╰──────────────────────────────────────────────────────────────────╯
+   +------------------------------------------------------------------+
+   |                                                                  |
+   |  *  arena model hunter                                           |
+   |     arena.ai automation - v1.0.0                                 |
+   |                                                                  |
+   |  o Arena account connected  .  you@example.com                   |
+   |  ~ mode: single-threaded  .  English                             |
+   |                                                                  |
+   |  > Start                                                ready    |
+   |    Settings                                   account & exit     |
+   |    Exit                                                          |
+   |                                                                  |
+   | arrows select    Enter open    q quit                            |
+   |                                                                  |
+   +------------------------------------------------------------------+
 ```
 
 ## 🎯 Waarom dit bestaat
@@ -111,16 +111,16 @@ Instellingen staan in `~/.arena-model-hunter/config.json`:
 
 ⚠️ **Onbeperkt aantal chats staat standaard uit en de waarschuwing is niet voor de sier.** Staat het aan, dan controleert `Start` niet meer op 1–100 maar accepteert elk getal — `250`, `1000`. Elke chat is twee tabbladen, dus grote getallen betekenen een vlaag parallelle verzoeken naar arena.ai: precies het patroon waarvoor rate limits en captcha's bestaan, met een reëel risico dat je account wordt beperkt. Zet het alleen aan als je dat accepteert, en blijf in single-threadmodus; boven de 100 vraagt de app eerst een tweede bevestiging met het exacte aantal.
 
-## 🔐 How signing in works
+## 🔐 Hoe inloggen werkt
 
-1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
-2. You click `Log In` → enter your email → `Continue with email`.
-   - Existing account → enter the password → `Log In`.
-   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
-3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
-4. It saves `session.json` + `state.json` and **closes the browser**.
+1. Er opent een **echt** Chromium-venster met een blijvend profiel (`~/.arena-model-hunter/profile`) — Cloudflare weigert headless browsers, dus de app gebruikt die nooit.
+2. Je klikt op `Log In` → voert je e-mailadres in → `Continue with email`.
+   - Bestaand account → voer het wachtwoord in → `Log In`.
+   - Nieuw e-mailadres → de naamstap mag worden overgeslagen → je krijgt een link per mail → plak die in de adresbalk (`Ctrl+L`, `Ctrl+V`, Enter) → maak een wachtwoord aan.
+3. De app controleert de pagina elke 1,5 s en herkent succes aan drie signalen: je e-mailadres verschijnt in de zijbalk, er ontstaat een `arena-auth-*`-cookie en de knop `Log In` verdwijnt.
+4. Daarna slaat hij `session.json` + `state.json` op en **sluit de browser**.
 
-The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+De site opent altijd in een **donker thema** (de browser start met `prefers-color-scheme: dark`, en arena.ai volgt dat).
 
 ## ⚡ Single-threaded en multi-threaded
 
@@ -131,31 +131,31 @@ The site always opens in **dark theme** (the browser is launched with `prefers-c
 
 Bij multi-threaded krijgt Arena meerdere verzoeken tegelijk, dus limieten en captcha's zijn waarschijnlijker. Gebeurt dat, schakel dan terug naar single-threaded.
 
-## 🗂️ Project structure
+## 🗂️ Projectstructuur
 
 ```
 arena-model-hunter/
-├── main.py           # menu, settings, scenarios
-├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
-├── arena_login.py    # browser, sign-in, session detection
-├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
-├── i18n.py           # UI translations (en / ru / zh)
+├── main.py             # menu, instellingen, scenario's
+├── ui.py               # terminal-UI: kader, alt-screen, toetsen lezen, formaatwijziging
+├── arena_login.py      # browser, inloggen, sessiedetectie, configuratie
+├── flow.py             # Arena ↔ lm.ikale.io-pijplijn, Verify, hernoemen
+├── i18n.py             # UI-vertalingen (en / ru / zh)
 ├── requirements.txt
 ├── run.bat / run.sh
-├── .github/workflows/  # CI: lint + translation checks
+├── .github/workflows/  # CI: lint en controle van vertalingen
 ├── LICENSE
-└── docs/i18n/        # this README in 30 languages
+└── docs/i18n/          # deze README in 30 talen
 ```
 
-## 🌍 Environment variables
+## 🌍 Omgevingsvariabelen
 
-| Variable | Default | Purpose |
+| Variabele | Standaard | Doel |
 |---|---|---|
-| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
-| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
-| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
-| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
-| `ARENA_URL` | `https://arena.ai/` | start URL |
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | map voor profiel en sessie |
+| `ARENA_HELPER_HOME` | — | oude naam van de variabele, werkt nog |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optioneel formulier automatisch invullen (wordt nooit opgeslagen) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | seconden wachten op inloggen |
+| `ARENA_URL` | `https://arena.ai/` | start-URL |
 
 ## 🧰 Veelgestelde vragen
 
@@ -171,10 +171,7 @@ Dit project is bedoeld voor **persoonlijke experimenten en educatie**. Het autom
 
 ## 📄 Licentie
 
-[MIT](LICENSE) — doe wat je wilt, zonder garantie.
+[GNU General Public License v3.0](LICENSE) — vrije software: je mag het gebruiken, bestuderen, delen en aanpassen. Als je het programma of een gewijzigde versie verspreidt, moet het onder de GPL blijven en moet de broncode open blijven. Er is geen garantie.
 
-<div align="center">
+Copyright (C) 2026 bijdragers aan arena model hunter.
 
-**[⬆ Naar boven](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
-
-</div>

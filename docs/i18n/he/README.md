@@ -15,28 +15,28 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
 
 </div>
 
 ---
 
 ```
-   ╭──────────────────────────────────────────────────────────────────╮
-   │                                                                  │
-   │  ✦  arena model hunter                                           │
-   │     arena.ai automation · v1.0.0                                 │
-   │                                                                  │
-   │  ● Arena account connected  ·  you@example.com                   │
-   │  ◷ mode: single-threaded  ·  English                             │
-   │                                                                  │
-   │  ▸ Start                                                ready    │
-   │    Settings                                   account & exit    │
-   │    Exit                                                          │
-   │                                                                  │
-   │ ↑ ↓  select    ↵  open    q  quit                                │
-   │                                                                  │
-   ╰──────────────────────────────────────────────────────────────────╯
+   +------------------------------------------------------------------+
+   |                                                                  |
+   |  *  arena model hunter                                           |
+   |     arena.ai automation - v1.0.0                                 |
+   |                                                                  |
+   |  o Arena account connected  .  you@example.com                   |
+   |  ~ mode: single-threaded  .  English                             |
+   |                                                                  |
+   |  > Start                                                ready    |
+   |    Settings                                   account & exit     |
+   |    Exit                                                          |
+   |                                                                  |
+   | arrows select    Enter open    q quit                            |
+   |                                                                  |
+   +------------------------------------------------------------------+
 ```
 
 ## 🎯 בשביל מה זה קיים
@@ -111,16 +111,16 @@ python main.py
 
 ⚠️ **שיחות ללא הגבלה כבוי כברירת מחדל, והאזהרה כאן אינה קישוט.** כשהוא דלוק, `Start` מפסיק לבדוק את הטווח 1–100 ומקבל כל מספר — `250`, `1000`. כל שיחה היא שני לשוניות, ולכן מספרים גדולים פירושם מטח בקשות מקבילות ל־arena.ai: בדיוק מה שהגבלות קצב וקפצ׳ה נועדו לעצור, עם סיכון אמיתי להגבלה של החשבון. הפעל רק אם אתה מקבל זאת, והישאר במצב חד־תהליכי; כל מספר מעל 100 דורש אישור שני עם המספר המדויק לפני שמשהו נפתח.
 
-## 🔐 How signing in works
+## 🔐 איך עובדת ההתחברות
 
-1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
-2. You click `Log In` → enter your email → `Continue with email`.
-   - Existing account → enter the password → `Log In`.
-   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
-3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
-4. It saves `session.json` + `state.json` and **closes the browser**.
+1. נפתח חלון Chromium **אמיתי** עם פרופיל קבוע (`~/.arena-model-hunter/profile`) — ‏Cloudflare דוחה דפדפנים headless, ולכן הכלי לא משתמש בהם לעולם.
+2. לוחצים `Log In` → מזינים אימייל → `Continue with email`.
+   - חשבון קיים → הזינו סיסמה → `Log In`.
+   - אימייל חדש → אפשר לדלג על שלב השם → מגיע קישור במייל → הדביקו אותו בשורת הכתובת (`Ctrl+L`, `Ctrl+V`, Enter) → צרו סיסמה.
+3. הכלי בודק את העמוד כל 1.5 שניות ומזהה הצלחה לפי שלושה סימנים: האימייל מופיע בסרגל הצד, נוצרת עוגייה `arena-auth-*`, וכפתור `Log In` נעלם.
+4. לאחר מכן הוא שומר `session.json` + `state.json` ו**סוגר את הדפדפן**.
 
-The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+האתר תמיד נפתח ב**ערכת נושא כהה** (הדפדפן מופעל עם `prefers-color-scheme: dark`, ו־arena.ai מכבד זאת).
 
 ## ⚡ מצב חד־תהליכי ורב־תהליכי
 
@@ -131,31 +131,31 @@ The site always opens in **dark theme** (the browser is launched with `prefers-c
 
 במצב רב־תהליכי Arena מקבל כמה בקשות בו־זמנית, ולכן מגבלות קצב וקפצ׳ה סבירות יותר. אם זה קורה — חזור למצב חד־תהליכי.
 
-## 🗂️ Project structure
+## 🗂️ מבנה הפרויקט
 
 ```
 arena-model-hunter/
-├── main.py           # menu, settings, scenarios
-├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
-├── arena_login.py    # browser, sign-in, session detection
-├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
-├── i18n.py           # UI translations (en / ru / zh)
+├── main.py             # תפריט, הגדרות, תרחישים
+├── ui.py               # ממשק המסוף: מסגרת, alt-screen, קריאת מקשים, שינוי גודל
+├── arena_login.py      # דפדפן, התחברות, זיהוי סשן, הגדרות
+├── flow.py             # צינור Arena ↔ lm.ikale.io, Verify, שינוי שם
+├── i18n.py             # תרגומי הממשק (en / ru / zh)
 ├── requirements.txt
 ├── run.bat / run.sh
-├── .github/workflows/  # CI: lint + translation checks
+├── .github/workflows/  # CI: בדיקת קוד ובדיקת תרגומים
 ├── LICENSE
-└── docs/i18n/        # this README in 30 languages
+└── docs/i18n/          # ה־README הזה ב־30 שפות
 ```
 
-## 🌍 Environment variables
+## 🌍 משתני סביבה
 
-| Variable | Default | Purpose |
+| משתנה | ברירת מחדל | למה משמש |
 |---|---|---|
-| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
-| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
-| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
-| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
-| `ARENA_URL` | `https://arena.ai/` | start URL |
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | תיקיית הפרופיל והסשן |
+| `ARENA_HELPER_HOME` | — | שמו הקודם של המשתנה, עדיין נתמך |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | מילוי אוטומטי אופציונלי של הטופס (לא נשמר בשום מקום) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | מספר השניות להמתנה להתחברות |
+| `ARENA_URL` | `https://arena.ai/` | כתובת התחלה |
 
 ## 🧰 שאלות נפוצות
 
@@ -171,10 +171,7 @@ arena-model-hunter/
 
 ## 📄 רישיון
 
-[MIT](LICENSE) — עשה כרצונך, ללא אחריות.
+[GNU General Public License v3.0](LICENSE) — תוכנה חופשית: אפשר להשתמש בה, לחקור, להפיץ ולשנות. אם מפיצים את התוכנית או גרסה ששונתה, היא חייבת להישאר תחת GPL והקוד חייב להישאר פתוח. אין אחריות.
 
-<div align="center">
+Copyright (C) 2026 תורמי arena model hunter.
 
-**[⬆ למעלה](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
-
-</div>

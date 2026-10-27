@@ -15,28 +15,28 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue)
 
 </div>
 
 ---
 
 ```
-   ╭──────────────────────────────────────────────────────────────────╮
-   │                                                                  │
-   │  ✦  arena model hunter                                           │
-   │     arena.ai automation · v1.0.0                                 │
-   │                                                                  │
-   │  ● Arena account connected  ·  you@example.com                   │
-   │  ◷ mode: single-threaded  ·  English                             │
-   │                                                                  │
-   │  ▸ Start                                                ready    │
-   │    Settings                                   account & exit    │
-   │    Exit                                                          │
-   │                                                                  │
-   │ ↑ ↓  select    ↵  open    q  quit                                │
-   │                                                                  │
-   ╰──────────────────────────────────────────────────────────────────╯
+   +------------------------------------------------------------------+
+   |                                                                  |
+   |  *  arena model hunter                                           |
+   |     arena.ai automation - v1.0.0                                 |
+   |                                                                  |
+   |  o Arena account connected  .  you@example.com                   |
+   |  ~ mode: single-threaded  .  English                             |
+   |                                                                  |
+   |  > Start                                                ready    |
+   |    Settings                                   account & exit     |
+   |    Exit                                                          |
+   |                                                                  |
+   | arrows select    Enter open    q quit                            |
+   |                                                                  |
+   +------------------------------------------------------------------+
 ```
 
 ## 🎯 왜 만들었나
@@ -111,16 +111,16 @@ python main.py
 
 ⚠️ **채팅 수 무제한은 기본값이 꺼짐이며, 경고는 장식이 아닙니다.** 켜면 `Start`가 1–100 검사를 멈추고 아무 숫자나 받습니다(`250`, `1000`). 채팅 하나에 탭 두 개이므로 큰 숫자는 arena.ai로 동시에 몰리는 요청 폭주를 뜻합니다. 속도 제한과 캡차가 존재하는 바로 그 패턴이며 계정 제한 위험이 실제로 있습니다. 감수할 수 있을 때만 켜고 단일 스레드 모드를 유지하세요. 100을 넘으면 열기 전에 정확한 개수를 담은 두 번째 확인을 요구합니다.
 
-## 🔐 How signing in works
+## 🔐 로그인은 어떻게 동작하나
 
-1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
-2. You click `Log In` → enter your email → `Continue with email`.
-   - Existing account → enter the password → `Log In`.
-   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
-3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
-4. It saves `session.json` + `state.json` and **closes the browser**.
+1. 영구 프로필을 쓰는 **실제** Chromium 창이 열립니다(`~/.arena-model-hunter/profile`). Cloudflare가 헤드리스 브라우저를 거부하기 때문에 앱은 절대 헤드리스로 실행하지 않습니다.
+2. `Log In` 을 누르고 → 이메일을 입력하고 → `Continue with email`.
+   - 기존 계정 → 비밀번호 입력 → `Log In`.
+   - 새 이메일 → 이름 단계는 건너뛸 수 있음 → 메일로 링크가 오면 → 주소창에 붙여넣기(`Ctrl+L`, `Ctrl+V`, Enter) → 비밀번호 생성.
+3. 앱은 1.5초마다 페이지를 확인하며 세 가지 신호로 로그인 성공을 판단합니다: 사이드바에 이메일이 나타남, `arena-auth-*` 쿠키 생성, `Log In` 버튼 사라짐.
+4. 그다음 `session.json` 과 `state.json` 을 저장하고 **브라우저를 닫습니다**.
 
-The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+사이트는 항상 **다크 테마**로 열립니다(브라우저를 `prefers-color-scheme: dark` 로 실행하며 arena.ai가 이를 따릅니다).
 
 ## ⚡ 단일 스레드와 멀티 스레드
 
@@ -131,31 +131,31 @@ The site always opens in **dark theme** (the browser is launched with `prefers-c
 
 멀티 스레드에서는 Arena가 여러 요청을 동시에 받으므로 속도 제한이나 captcha가 더 잘 생깁니다. 그런 경우 단일 스레드로 되돌리세요.
 
-## 🗂️ Project structure
+## 🗂️ 프로젝트 구조
 
 ```
 arena-model-hunter/
-├── main.py           # menu, settings, scenarios
-├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
-├── arena_login.py    # browser, sign-in, session detection
-├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
-├── i18n.py           # UI translations (en / ru / zh)
+├── main.py             # 메뉴, 설정, 시나리오
+├── ui.py               # 터미널 UI: 프레임, alt-screen, 키 입력, 창 크기 변경
+├── arena_login.py      # 브라우저, 로그인, 세션 감지, 설정
+├── flow.py             # Arena ↔ lm.ikale.io 파이프라인, Verify, 이름 변경
+├── i18n.py             # UI 번역(en / ru / zh)
 ├── requirements.txt
 ├── run.bat / run.sh
-├── .github/workflows/  # CI: lint + translation checks
+├── .github/workflows/  # CI: 린트와 번역 검사
 ├── LICENSE
-└── docs/i18n/        # this README in 30 languages
+└── docs/i18n/          # 이 README의 30개 언어판
 ```
 
-## 🌍 Environment variables
+## 🌍 환경 변수
 
-| Variable | Default | Purpose |
+| 변수 | 기본값 | 용도 |
 |---|---|---|
-| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
-| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
-| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
-| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
-| `ARENA_URL` | `https://arena.ai/` | start URL |
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | 프로필과 세션 폴더 |
+| `ARENA_HELPER_HOME` | — | 변수의 옛 이름, 계속 지원됨 |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | 선택적 폼 자동 채우기(저장되지 않음) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | 로그인을 기다리는 시간(초) |
+| `ARENA_URL` | `https://arena.ai/` | 시작 URL |
 
 ## 🧰 자주 묻는 질문
 
@@ -171,10 +171,7 @@ arena-model-hunter/
 
 ## 📄 라이선스
 
-[MIT](LICENSE) — 마음대로 사용하세요. 보증은 없습니다.
+[GNU General Public License v3.0](LICENSE) — 자유 소프트웨어입니다. 사용·연구·공유·수정할 수 있습니다. 프로그램이나 수정본을 배포하면 GPL을 유지해야 하고 소스 코드도 계속 공개되어야 합니다. 보증은 없습니다.
 
-<div align="center">
+Copyright (C) 2026 arena model hunter 기여자.
 
-**[⬆ 맨 위로](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
-
-</div>
