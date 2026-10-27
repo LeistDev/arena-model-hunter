@@ -48,6 +48,16 @@ jobs:
           grep -rl "license-GPL" --include="*.md" . && exit 1 || true
           grep -q "SPDX-License-Identifier: MIT" main.py
 
+      - name: No session artefacts committed
+        run: |
+          set -euo pipefail
+          bad=$(git ls-files | grep -E '(^|/)(session|state)\.json$|(^|/)\.env$|(^|/)\.env\.(local|dev|development|prod|production)$|(^|/)profile/' || true)
+          if [ -n "$bad" ]; then
+            echo "Session/credential artefacts must never be committed:"
+            echo "$bad"
+            exit 1
+          fi
+
       - name: Check the screenshot art stays ASCII
         run: |
           python - <<'PY'

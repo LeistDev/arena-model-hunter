@@ -15,5 +15,15 @@ Thumbs.db
 
 # Local run artifacts
 .arena-model-hunter/
-.arena-helper/          # старое имя папки профиля
+.arena-helper/
 *.log
+
+# Session and credential artefacts
+# Written by the app when ARENA_HUNTER_HOME / ARENA_HELPER_HOME points inside the repo.
+# session.json -> account email; state.json -> cookies (storage_state); profile/ -> Chromium profile.
+.env
+.env.*
+!.env.example
+session.json
+state.json
+profile/
