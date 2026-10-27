@@ -1,0 +1,180 @@
+<div align="center">
+
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | **🇹🇭 ไทย** | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
+</div>
+
+---
+
+<div align="center">
+
+# ✦ arena model hunter
+
+**นักล่าโมเดลสำหรับ arena.ai: รันแชตโหมด agent เป็นชุด ตรวจลายนิ้วมือของทุกคำตอบ หาว่าตอบโดยโมเดลไหน แล้วเปลี่ยนชื่อแชตตามโมเดลนั้น — พอรุ่งเช้าคุณจะได้แชตที่ติดป้ายว่าเป็น Claude Opus, GPT-5, Gemini หรือโมเดลที่คุณกำลังตามหา**
+
+![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+</div>
+
+---
+
+```
+   ╭──────────────────────────────────────────────────────────────────╮
+   │                                                                  │
+   │  ✦  arena model hunter                                           │
+   │     arena.ai automation · v1.0.0                                 │
+   │                                                                  │
+   │  ● Arena account connected  ·  you@example.com                   │
+   │  ◷ mode: single-threaded  ·  English                             │
+   │                                                                  │
+   │  ▸ Start                                                ready    │
+   │    Settings                                   account & exit    │
+   │    Exit                                                          │
+   │                                                                  │
+   │ ↑ ↓  select    ↵  open    q  quit                                │
+   │                                                                  │
+   ╰──────────────────────────────────────────────────────────────────╯
+```
+
+## 🎯 ทำไมต้องมีตัวนี้
+
+ในโหมด agent arena.ai เป็นคนเลือกเองว่าโมเดลไหนจะตอบ และไม่ใช่โมเดลที่คุณต้องการเสมอไป: บางทีก็ได้โมเดลระดับท็อป (Claude Opus และรุ่นใกล้เคียง) บางทีก็ได้อะไรที่อ่อนกว่ามาก เครื่องมือนี้เปลี่ยนการเสี่ยงโชคให้เป็นการค้นหา: เปิดแชตโหมด agent เป็นชุด เล่นตัวอย่างลายนิ้วมือทั้งสามในทุกแชต ถามเว็บตรวจลายนิ้วมือว่าโมเดลไหนตอบ แล้วเขียนผลลงในชื่อแชต (`claude-opus-4 99.9%`, `gpt-5.2 87%`) ปล่อยทิ้งไว้ข้ามคืนด้วยจำนวนแชตเท่าที่ต้องการ พอรุ่งเช้าก็มีรายการที่ติดป้ายแล้ว: เปิดแชตที่ชื่อบอกว่าเป็นโมเดลที่คุณต้องใช้ แล้วทำงานต่อในนั้นได้เลย นี่คือจุดสำคัญ — ไม่ใช่ระบบอัตโนมัติเพื่ออัตโนมัติ แต่คือการได้แชตที่ทำงานบนโมเดลที่คุณต้องการจริง ๆ
+
+## ✨ ทำอะไรได้บ้าง
+
+- **ล็อกอินครั้งเดียว — เซสชันอยู่ต่อ.** เปิด Chromium ตัวจริง (ไม่ใช่ headless) คุณล็อกอิน arena.ai ตามปกติ แอปจะตรวจจับ บันทึกเซสชัน แล้วปิดเบราว์เซอร์ให้เอง
+- **N แชตพร้อมกัน.** คุณใส่ตัวเลข 1–100 แล้วแท็บ `arena.ai/agent` จะเปิดเท่านั้นพอดี พร้อมแท็บ `lm.ikale.io` จำนวนเท่ากัน
+- **คัดลอกให้คุณ.** พรอมป์ต์ของแต่ละตัวอย่างถูกส่งให้เอเจนต์ รอคำตอบจนครบ แล้ววางลงช่อง Reply — สามตัวอย่างต่อแชต
+- **บอกชื่อโมเดล.** กด Verify บนเว็บลายนิ้วมือ อ่านผู้สมัครอันดับหนึ่งและค่าความมั่นใจตามที่เว็บแสดง แล้วเปลี่ยนชื่อแชต Arena เป็น `โมเดล ความมั่นใจ` (เช่น `gpt-6-luna 99.9%`)
+- **สองโหมดการทำงาน.** โหมดเธรดเดียว (ปลอดภัย ทำทีละแชต) และโหมดหลายเธรด (ทุกแชตพร้อมกัน เร็วขึ้น 1.5–2 เท่า)
+- **อินเทอร์เฟซสามภาษา.** English, Русский, 中文 — สลับได้ในแอป ไม่ต้องรีสตาร์ต
+
+## 🔄 ขั้นตอนการทำงาน
+
+1. **ล็อกอิน** — เบราว์เซอร์เปิดขึ้น คุณยืนยันตัวตน แอปตรวจจับแล้วปิดหน้าต่าง
+2. **เริ่ม → จำนวนแชต** — เช่น `3` คือแท็บ Arena สามแท็บและแท็บลายนิ้วมือสามแท็บ
+3. **ตัวอย่าง 1 → 3** — แต่ละพรอมป์ต์ส่งไปยังเอเจนต์ แต่ละคำตอบกลับเข้าเว็บ
+4. **Verify** — เว็บจัดอันดับโมเดลผู้สมัคร แอปอ่านผู้ชนะและค่าความมั่นใจ
+5. **เปลี่ยนชื่อ** — แชต Arena ได้ชื่อ `โมเดล ความมั่นใจ` และมีสรุปแสดงในคอนโซล
+
+## 📋 สิ่งที่ต้องมี
+
+- Python **3.10+**
+- Windows 10/11, macOS หรือ Linux
+- บัญชี arena.ai (อีเมลและรหัสผ่าน หรือลิงก์ทางอีเมล)
+- พื้นที่ว่าง ~400 MB สำหรับ Chromium ของ Playwright
+
+## 🚀 การติดตั้ง
+
+```bash
+git clone <this-repo> arena-model-hunter
+cd arena-model-hunter
+
+pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+**Windows:** จากนั้นดับเบิลคลิก `run.bat` ได้เลย (เปิด UTF-8 เพื่อให้ตัวอักษรซีริลลิกแสดงถูกต้อง)
+**macOS / Linux:** `./run.sh` หรือ `python main.py`
+
+## 🕹️ การใช้งาน
+
+```bash
+python main.py
+```
+
+| ตัวเลือก | คำอธิบาย |
+|---|---|
+| **เริ่ม** | ถามว่าจะรันกี่แชต (1–100 หรือจำนวนใดก็ได้เมื่อเปิดแชตไม่จำกัด) แล้วเริ่มขั้นตอนทั้งหมด |
+| **การตั้งค่า** | โหมดการทำงาน ภาษาของอินเทอร์เฟซ ลบบัญชี arena.ai ที่ใช้งานอยู่ |
+| **ออก** | ปิดแอป (เทอร์มินัลกลับไปแสดงเนื้อหาเดิม) |
+
+เมนูปรับตามสถานะ: ถ้ายังไม่มีบัญชีเชื่อมต่อ จะแสดงรายการ **เข้าสู่ระบบ** และเคอร์เซอร์อยู่ที่รายการนั้น หลังล็อกอินสำเร็จรายการนี้จะหายไป
+
+## ⚙️ การตั้งค่า
+
+| ตัวเลือก | คำอธิบาย |
+|---|---|
+| **โหมดการทำงาน** | `เธรดเดียว` (ค่าเริ่มต้น) / `หลายเธรด` — หลายเธรดเร็วกว่าแต่ส่งคำขอพร้อมกัน |
+| **ภาษา** | `English` / `Русский` / `中文` — มีผลทันทีและจำไว้ |
+| **แชตไม่จำกัด** ⚠️ | ยกเลิกเพดาน 100 แชต: ปุ่ม `Start` รับตัวเลขใดก็ได้ — อันตราย ปิดไว้เป็นค่าเริ่มต้น |
+| **ลบบัญชี arena.ai ที่ใช้งานอยู่** | ลบโปรไฟล์เบราว์เซอร์และเซสชัน คือออกจากระบบ |
+
+การตั้งค่าอยู่ใน `~/.arena-model-hunter/config.json`:
+
+```json
+{ "parallel": false, "lang": "en", "unlimited": false }
+```
+
+⚠️ **แชตไม่จำกัดถูกปิดไว้เป็นค่าเริ่มต้น และคำเตือนนี้ไม่ได้เขียนเล่น ๆ** เมื่อเปิดแล้ว `Start` จะไม่ตรวจช่วง 1–100 อีก แต่รับตัวเลขใดก็ได้ — `250`, `1000` แชตหนึ่งตัวใช้สองแท็บ ตัวเลขมากจึงหมายถึงคำขอจำนวนมหาศาลที่ยิงถึง arena.ai พร้อมกัน ซึ่งเป็นเหตุผลที่การจำกัดอัตราและแคปชามีอยู่จริง และบัญชีอาจถูกจำกัดได้ เปิดเฉพาะเมื่อคุณยอมรับความเสี่ยงนี้ และใช้โหมดเธรดเดี่ยวไว้ ตัวเลขเกิน 100 จะมีการยืนยันรอบที่สองพร้อมจำนวนที่แน่นอนก่อนเปิดอะไรทั้งสิ้น
+
+## 🔐 How signing in works
+
+1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
+2. You click `Log In` → enter your email → `Continue with email`.
+   - Existing account → enter the password → `Log In`.
+   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
+3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
+4. It saves `session.json` + `state.json` and **closes the browser**.
+
+The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+
+## ⚡ โหมดเธรดเดียวและหลายเธรด
+
+| โหมด | วิธีการทำงาน | วัดจาก 3 แชต |
+|---|---|---|
+| **เธรดเดียว** (ค่าเริ่มต้น) | ประมวลผลคู่แท็บทีละคู่ และนำแท็บที่ทำงานอยู่ขึ้นมาหน้า | ≈7.5 นาที |
+| **หลายเธรด** | ทุกคู่แท็บทำงานพร้อมกัน ไม่สลับโฟกัส | ≈4.5 นาที |
+
+ในโหมดหลายเธรด Arena จะได้รับหลายคำขอพร้อมกัน จึงมีโอกาสเจอการจำกัดอัตราและแคปชาสูงขึ้น หากเกิดปัญหาให้กลับไปใช้โหมดเธรดเดียว
+
+## 🗂️ Project structure
+
+```
+arena-model-hunter/
+├── main.py           # menu, settings, scenarios
+├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
+├── arena_login.py    # browser, sign-in, session detection
+├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
+├── i18n.py           # UI translations (en / ru / zh)
+├── requirements.txt
+├── run.bat / run.sh
+├── .github/workflows/  # CI: lint + translation checks
+├── LICENSE
+└── docs/i18n/        # this README in 30 languages
+```
+
+## 🌍 Environment variables
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
+| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
+| `ARENA_URL` | `https://arena.ai/` | start URL |
+
+## 🧰 คำถามที่พบบ่อย
+
+- **«Just a moment…» / การตรวจสอบ Cloudflare** — ต้องมีหน้าต่างเบราว์เซอร์ที่มองเห็นได้ ไม่ควรรันบนเซิร์ฟเวอร์ที่ไม่มีเดสก์ท็อป
+- **«ยังไม่ได้ติดตั้งเบราว์เซอร์»** — รัน `python -m playwright install chromium`
+- **เจอแคปชาหรือคำขอไม่ถูกส่ง** — อาจติดลิมิต: เปิดโหมดเธรดเดียวและลดความเร็วลง
+- **อยากเริ่มใหม่ทั้งหมด** — การตั้งค่า → *ลบบัญชี arena.ai ที่ใช้งานอยู่* หรือลบโฟลเดอร์ `~/.arena-model-hunter`
+- **ล่าทั้งคืน** — การตั้งค่า → *แชตไม่จำกัด* แล้วพิมพ์ `300` ในหน้าเริ่มและยืนยัน ใช้โหมดเธรดเดี่ยวไว้ แล้วรุ่งเช้าค่อยดูแชตที่ถูกเปลี่ยนชื่อ
+
+## ⚠️ ข้อจำกัดความรับผิด
+
+โปรเจกต์นี้จัดทำเพื่อ **การทดลองส่วนตัวและการเรียนรู้** โดยอัตโนมัติเว็บไซต์ของบุคคลที่สาม การทำงานอัตโนมัติอาจขัดต่อข้อกำหนดการใช้งานของ arena.ai และเว็บลายนิ้วมือ และอาจทำให้บัญชีถูกจำกัด ใช้ด้วยความเสี่ยงของคุณเอง อย่าสร้างภาระเกินจำเป็น หากไม่มั่นใจให้ใช้โหมดเธรดเดียว และอย่าเผยแพร่ข้อมูลของคุณ — แอปไม่บันทึกรหัสผ่านลงดิสก์
+
+## 📄 สัญญาอนุญาต
+
+[MIT](LICENSE) — ทำอะไรก็ได้ ไม่มีการรับประกัน
+
+<div align="center">
+
+**[⬆ ขึ้นบน](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
+
+</div>

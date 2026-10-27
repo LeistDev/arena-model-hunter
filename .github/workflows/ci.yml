@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyflakes
+
+      - name: Byte-compile and lint
+        run: |
+          python -m compileall -q .
+          python -m pyflakes *.py
+          # «безлимит» должен оставаться выключенным по умолчанию
+          grep -q '"unlimited": False' arena_login.py
+
+      - name: Check UI translations
+        run: |
+          python - <<'PY'
+          from i18n import LANGS, _STRINGS, DEFAULT_LANG
+          assert DEFAULT_LANG in LANGS, "default language must be in the menu"
+          for key, table in _STRINGS.items():
+              missing = set(LANGS) - set(table)
+              assert not missing, f"{key}: missing languages {sorted(missing)}"
+              for code, value in table.items():
+                  assert str(value).strip(), f"{key}: empty value for {code}"
+          print(f"translations OK: {len(_STRINGS)} keys x {len(LANGS)} languages")
+          PY
+
+      - name: Check localized READMEs
+        run: |
+          python - <<'PY'
+          import os, re
+          langs = sorted(os.listdir("docs/i18n"))
+          assert len(langs) == 30, f"expected 30 translations, found {len(langs)}"
+          for code in langs:
+              path = os.path.join("docs/i18n", code, "README.md")
+              text = open(path, encoding="utf-8").read()
+              assert text.count("Available in:") == 1, f"{code}: language switcher"
+              for target in re.findall(r"\]\(([^)#\s]+\.md)\)", text):
+                  full = os.path.normpath(os.path.join(os.path.dirname(path), target))
+                  assert os.path.exists(full), f"{code}: dead link {target}"
+          print("localized READMEs OK:", len(langs))
+          PY

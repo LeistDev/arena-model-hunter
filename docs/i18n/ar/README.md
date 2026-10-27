@@ -1,0 +1,180 @@
+<div align="center">
+
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | **🇸🇦 العربية** | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
+</div>
+
+---
+
+<div align="center">
+
+# ✦ arena model hunter
+
+**صائد النماذج لـ arena.ai: يشغّل دفعة من محادثات وضع agent، ويأخذ بصمة كل إجابة، ويكتشف أي نموذج أجاب، ثم يعيد تسمية المحادثة باسمه — في الصباح تكون لديك محادثة موسومة تعمل على Claude Opus أو GPT-5 أو Gemini أو النموذج الذي كنت تبحث عنه.**
+
+![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+</div>
+
+---
+
+```
+   ╭──────────────────────────────────────────────────────────────────╮
+   │                                                                  │
+   │  ✦  arena model hunter                                           │
+   │     arena.ai automation · v1.0.0                                 │
+   │                                                                  │
+   │  ● Arena account connected  ·  you@example.com                   │
+   │  ◷ mode: single-threaded  ·  English                             │
+   │                                                                  │
+   │  ▸ Start                                                ready    │
+   │    Settings                                   account & exit    │
+   │    Exit                                                          │
+   │                                                                  │
+   │ ↑ ↓  select    ↵  open    q  quit                                │
+   │                                                                  │
+   ╰──────────────────────────────────────────────────────────────────╯
+```
+
+## 🎯 لماذا وُجد هذا
+
+في وضع agent يقرّر arena.ai بنفسه أي نموذج سيجيب، وهو ليس دائمًا النموذج الذي تريده: أحيانًا نموذج من الطبقة الأولى (Claude Opus وأمثاله)، وأحيانًا شيء أضعف بكثير. هذه الأداة تحوّل تلك القرعة إلى بحث: تفتح دفعة من محادثات agent، وتعيد عيّنات البصمة الثلاث في كل واحدة منها، وتسأل موقع البصمات أي نموذج أجاب، ثم تكتب الحكم في عنوان المحادثة (`claude-opus-4 99.9%`، `gpt-5.2 87%`). اتركه يعمل ليلًا بأي عدد تريده من المحادثات؛ في الصباح تجد قائمة موسومة: افتح المحادثة التي يحمل عنوانها النموذج الذي تحتاجه واعمل فيها. هذا هو المقصد — ليس أتمتة لأجل الأتمتة، بل الحصول على محادثة تعمل فعلًا على النموذج الذي أردته.
+
+## ✨ ما الذي يفعله
+
+- **تسجيل دخول لمرة واحدة — تبقى الجلسة.** تُفتح نافذة Chromium حقيقية (وليست headless)، وتسجّل الدخول إلى arena.ai كالمعتاد؛ يكتشف التطبيق ذلك ويحفظ الجلسة ثم يغلق المتصفح بنفسه.
+- **N محادثة في الوقت نفسه.** تكتب رقمًا من 1 إلى 100 — تُفتح بعددها تمامًا من ألسنة `arena.ai/agent` ومثلها من ألسنة `lm.ikale.io`.
+- **ينسخ بدلًا عنك.** يُرسل نص كل عيّنة إلى الوكيل، وينتظر الإجابة كاملة ثم يلصقها في حقل Reply — ثلاث عيّنات لكل محادثة.
+- **يحدّد النموذج.** يضغط Verify على موقع البصمات، ويقرأ أفضل مرشّح ونسبة الثقة كما يعرضهما الموقع، ثم يعيد تسمية محادثة Arena إلى `النموذج الثقة` (مثل `gpt-6-luna 99.9%`).
+- **وضعان للتشغيل.** أحادي الخيط (آمن، محادثة بعد أخرى) ومتعدد الخيوط (كل المحادثات بالتوازي، أسرع بـ 1.5–2 مرة).
+- **واجهة بثلاث لغات.** English وРусский و中文 — تُبدَّل داخل التطبيق دون إعادة تشغيل.
+
+## 🔄 كيف تسير دورة التشغيل
+
+1. **تسجيل الدخول** — يُفتح المتصفح، وتوثّق نفسك، فيكتشف التطبيق ذلك ويغلق النافذة.
+2. **بدء → عدد المحادثات** — مثلًا `3`: ثلاثة ألسنة Arena وثلاثة ألسنة للبصمات.
+3. **العيّنات 1 → 3** — كل طلب يذهب إلى الوكيل، وكل إجابة تعود إلى الموقع.
+4. **Verify** — يرتّب الموقع النماذج المرشّحة، ويقرأ التطبيق الفائز ونسبة الثقة.
+5. **إعادة التسمية** — تصبح المحادثة في Arena باسم `النموذج الثقة`، ويظهر ملخّص في الطرفية.
+
+## 📋 المتطلبات
+
+- Python **3.10+**
+- Windows 10/11 أو macOS أو Linux
+- حساب على arena.ai (بريد وكلمة مرور أو رابط عبر البريد)
+- ~400 ميغابايت مساحة حرة لـ Chromium الخاص بـ Playwright
+
+## 🚀 التركيب
+
+```bash
+git clone <this-repo> arena-model-hunter
+cd arena-model-hunter
+
+pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+**Windows:** بعد ذلك يكفي النقر المزدوج على `run.bat` (يفعّل UTF-8 لعرض الحروف السيريلية بشكل صحيح).
+**macOS / Linux:** `./run.sh` أو `python main.py`.
+
+## 🕹️ الاستخدام
+
+```bash
+python main.py
+```
+
+| الخيار | الوصف |
+|---|---|
+| **بدء** | يسأل عن عدد المحادثات (1–100، أو أي رقم مع المحادثات بلا حد) ثم يشغّل العملية كاملة |
+| **الإعدادات** | وضع التشغيل، لغة الواجهة، حذف حساب arena.ai النشط |
+| **خروج** | يغلق التطبيق (تعود الطرفية إلى محتواها السابق) |
+
+تتكيّف القائمة مع الحالة: ما دام لا يوجد حساب متصل يظهر عنصر **تسجيل الدخول** ويقف المؤشر عليه؛ وبعد نجاح الدخول يختفي هذا العنصر.
+
+## ⚙️ الإعدادات
+
+| الخيار | الوصف |
+|---|---|
+| **وضع التشغيل** | `أحادي الخيط` (افتراضي) / `متعدد الخيوط` — المتعدد أسرع لكنه يرسل طلبات متوازية |
+| **اللغة** | `English` / `Русский` / `中文` — تُطبَّق فورًا وتُحفظ |
+| **محادثات بلا حد** ⚠️ | يلغي سقف 100 محادثة: زر `Start` يقبل أي رقم — خطير، ومُعطَّل افتراضيًا |
+| **حذف حساب arena.ai النشط** | يمسح ملف المتصفح والجلسة، أي تسجيل الخروج |
+
+تُحفظ الإعدادات في `~/.arena-model-hunter/config.json`:
+
+```json
+{ "parallel": false, "lang": "en", "unlimited": false }
+```
+
+⚠️ **«محادثات بلا حد» مُعطَّل افتراضيًا، والتحذير هنا ليس للزينة.** عند تفعيله يتوقف `Start` عن فحص المدى 1–100 ويقبل أي رقم — `250`، `1000`. كل محادثة تعني لسانين، لذا فالأرقام الكبيرة تعني وابلًا من الطلبات المتوازية إلى arena.ai: وهذا بالضبط ما توجد حدود المعدّل والكابتشا لمنعه، مع خطر حقيقي بتقييد الحساب. لا تفعّله إلا إذا كنت تقبل ذلك، وأبقِ الوضع أحادي الخيط؛ وأي رقم فوق 100 يطلب تأكيدًا ثانيًا بالعدد الدقيق قبل أن يُفتح أي شيء.
+
+## 🔐 How signing in works
+
+1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
+2. You click `Log In` → enter your email → `Continue with email`.
+   - Existing account → enter the password → `Log In`.
+   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
+3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
+4. It saves `session.json` + `state.json` and **closes the browser**.
+
+The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+
+## ⚡ الوضع الأحادي ومتعدد الخيوط
+
+| الوضع | كيف يعمل | قياس على 3 محادثات |
+|---|---|---|
+| **أحادي الخيط** (افتراضي) | تُعالج أزواج الألسنة واحدًا بعد آخر، ويُقدَّم اللسان النشط إلى الأمام | ≈7.5 دقيقة |
+| **متعدد الخيوط** | تعمل جميع أزواج الألسنة معًا دون نقل التركيز | ≈4.5 دقيقة |
+
+في الوضع متعدد الخيوط يتلقى Arena عدة طلبات في وقت واحد، لذا تزيد احتمالية حدود المعدّل والكابتشا. إن حدث ذلك فارجع إلى الوضع أحادي الخيط.
+
+## 🗂️ Project structure
+
+```
+arena-model-hunter/
+├── main.py           # menu, settings, scenarios
+├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
+├── arena_login.py    # browser, sign-in, session detection
+├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
+├── i18n.py           # UI translations (en / ru / zh)
+├── requirements.txt
+├── run.bat / run.sh
+├── .github/workflows/  # CI: lint + translation checks
+├── LICENSE
+└── docs/i18n/        # this README in 30 languages
+```
+
+## 🌍 Environment variables
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
+| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
+| `ARENA_URL` | `https://arena.ai/` | start URL |
+
+## 🧰 أسئلة شائعة
+
+- **«Just a moment…» / تحقق Cloudflare** — يلزم وجود نافذة متصفح مرئية؛ لا تشغّله على خادم بلا سطح مكتب.
+- **«المتصفح غير مثبّت»** — شغّل `python -m playwright install chromium`.
+- **كابتشا أو طلبات لا تُرسل** — غالبًا وصلت إلى حدّ: فعّل الوضع أحادي الخيط وأبطئ الوتيرة.
+- **أريد البدء من جديد** — الإعدادات → *حذف حساب arena.ai النشط*، أو احذف مجلد `~/.arena-model-hunter`.
+- **الصيد طوال الليل** — الإعدادات → *محادثات بلا حد*، ثم اكتب `300` في «بدء» وأكّد؛ أبقِ الوضع أحادي الخيط وانظر إلى المحادثات المعاد تسميتها في الصباح.
+
+## ⚠️ إخلاء المسؤولية
+
+هذا المشروع مخصّص **للتجارب الشخصية والتعلّم**. فهو يؤتمت موقعًا لطرف ثالث؛ وقد تخالف الأتمتة شروط استخدام arena.ai وموقع البصمات وقد تؤدي إلى تقييد الحساب. استخدمه على مسؤوليتك، ولا تُنشئ حملًا زائدًا، وعند الشك ابقَ على الوضع أحادي الخيط، ولا تنشر بياناتك أبدًا — فالتطبيق لا يحفظ كلمة المرور على القرص.
+
+## 📄 الترخيص
+
+[MIT](LICENSE) — افعل ما تشاء، دون أي ضمان.
+
+<div align="center">
+
+**[⬆ إلى الأعلى](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
+
+</div>

@@ -1,0 +1,180 @@
+<div align="center">
+
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | **🇮🇳 हिन्दी** | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
+</div>
+
+---
+
+<div align="center">
+
+# ✦ arena model hunter
+
+**arena.ai के लिए मॉडल हंटर: एजेंट चैट का एक बैच चलाता है, हर जवाब की फिंगरप्रिंट जाँचता है, पता लगाता है कि कौन-सा मॉडल जवाब दे रहा है, और चैट का नाम उसी मॉडल पर रख देता है — सुबह आपके पास Claude Opus, GPT-5, Gemini या जिस मॉडल की आप तलाश में थे, उसका लेबल लगा चैट तैयार होता है।**
+
+![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+</div>
+
+---
+
+```
+   ╭──────────────────────────────────────────────────────────────────╮
+   │                                                                  │
+   │  ✦  arena model hunter                                           │
+   │     arena.ai automation · v1.0.0                                 │
+   │                                                                  │
+   │  ● Arena account connected  ·  you@example.com                   │
+   │  ◷ mode: single-threaded  ·  English                             │
+   │                                                                  │
+   │  ▸ Start                                                ready    │
+   │    Settings                                   account & exit    │
+   │    Exit                                                          │
+   │                                                                  │
+   │ ↑ ↓  select    ↵  open    q  quit                                │
+   │                                                                  │
+   ╰──────────────────────────────────────────────────────────────────╯
+```
+
+## 🎯 यह क्यों बनाया गया
+
+एजेंट मोड में arena.ai खुद तय करता है कि कौन-सा मॉडल जवाब देगा, और वह अक्सर वही नहीं होता जो आप चाहते हैं: कभी बढ़िया मॉडल (Claude Opus जैसे), कभी उससे काफ़ी कमज़ोर। यह टूल उस लॉटरी को एक खोज में बदल देता है: एजेंट चैट का बैच खोलता है, हर चैट में तीनों फिंगरप्रिंट सैंपल चलाता है, फिंगरप्रिंट साइट से पूछता है कि कौन-सा मॉडल जवाब दे रहा है, और नतीजा चैट के नाम में लिख देता है (`claude-opus-4 99.9%`, `gpt-5.2 87%`)। रात भर के लिए जितने चैट चाहें चलने दें; सुबह लेबल लगी सूची तैयार मिलती है: जिस चैट के नाम में आपका ज़रूरी मॉडल हो, उसे खोलिए और उसी में काम कीजिए। बात यही है — सिर्फ़ ऑटोमेशन नहीं, बल्कि वह चैट पाना जो सचमुच उसी मॉडल पर चल रहा हो जो आपको चाहिए था।
+
+## ✨ यह क्या करता है
+
+- **एक बार साइन इन — सेशन बना रहता है।** असली (हेडलेस नहीं) Chromium खुलता है, आप आम तरह से arena.ai में लॉग इन करते हैं; ऐप इसे पहचान लेता है, सेशन सहेजता है और ब्राउज़र खुद बंद कर देता है।
+- **N चैट एक साथ।** आप 1 से 100 तक संख्या डालते हैं — ठीक उतने ही `arena.ai/agent` टैब और उतने ही `lm.ikale.io` टैब खुलते हैं।
+- **आपके बदले कॉपी करता है।** हर सैंपल का प्रॉम्प्ट एजेंट को भेजा जाता है, पूरा जवाब आने तक इंतज़ार होता है और Reply फ़ील्ड में चिपका दिया जाता है — प्रति चैट तीन सैंपल।
+- **मॉडल बताता है।** फिंगरप्रिंट साइट पर Verify दबाता है, साइट जैसा दिखाती है वैसा ही शीर्ष उम्मीदवार और भरोसा पढ़ता है, फिर Arena चैट का नाम `मॉडल भरोसा` (जैसे `gpt-6-luna 99.9%`) कर देता है।
+- **दो रन मोड।** सिंगल-थ्रेड (सुरक्षित, एक-एक करके) और मल्टी-थ्रेड (सभी समानांतर, 1.5–2× तेज़)।
+- **तीन भाषाओं वाला इंटरफ़ेस।** English, Русский, 中文 — ऐप के भीतर बदलें, रीस्टार्ट की ज़रूरत नहीं।
+
+## 🔄 एक रन कैसे चलता है
+
+1. **साइन इन** — ब्राउज़र खुलता है, आप प्रमाणित होते हैं, ऐप पहचानता है और विंडो बंद कर देता है।
+2. **शुरू → चैट की संख्या** — जैसे `3`: तीन Arena टैब और तीन फिंगरप्रिंट टैब।
+3. **सैंपल 1 → 3** — हर प्रॉम्प्ट एजेंट के पास, हर जवाब वापस साइट पर।
+4. **Verify** — साइट उम्मीदवार मॉडल की रैंकिंग देती है, ऐप विजेता और भरोसा पढ़ता है।
+5. **नाम बदलना** — Arena चैट का नाम `मॉडल भरोसा` हो जाता है और कंसोल में सारांश दिखता है।
+
+## 📋 ज़रूरी चीज़ें
+
+- Python **3.10+**
+- Windows 10/11, macOS या Linux
+- arena.ai खाता (ईमेल और पासवर्ड या ईमेल से मिला लिंक)
+- Playwright के Chromium के लिए ~400 MB खाली जगह
+
+## 🚀 इंस्टॉलेशन
+
+```bash
+git clone <this-repo> arena-model-hunter
+cd arena-model-hunter
+
+pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+**Windows:** इसके बाद `run.bat` पर डबल क्लिक काफ़ी है (यह UTF-8 चालू करता है ताकि सिरिलिक सही दिखे)।
+**macOS / Linux:** `./run.sh` या `python main.py`।
+
+## 🕹️ इस्तेमाल
+
+```bash
+python main.py
+```
+
+| विकल्प | विवरण |
+|---|---|
+| **शुरू** | पूछता है कि कितने चैट चलाने हैं (1–100, असीमित चैट के साथ कोई भी संख्या) और पूरी प्रक्रिया शुरू करता है |
+| **सेटिंग्स** | रन मोड, इंटरफ़ेस की भाषा, सक्रिय arena.ai खाता हटाना |
+| **बाहर** | ऐप बंद करता है (टर्मिनल अपनी पिछली सामग्री पर लौटता है) |
+
+मेन्यू स्थिति के अनुसार बदलता है: जब तक खाता जुड़ा नहीं है, **साइन इन** दिखता है और कर्सर उसी पर रहता है; सफल लॉगिन के बाद वह आइटम गायब हो जाता है।
+
+## ⚙️ सेटिंग्स
+
+| विकल्प | विवरण |
+|---|---|
+| **रन मोड** | `सिंगल-थ्रेड` (डिफ़ॉल्ट) / `मल्टी-थ्रेड` — मल्टी-थ्रेड तेज़ है पर समानांतर अनुरोध भेजता है |
+| **भाषा** | `English` / `Русский` / `中文` — तुरंत लागू होती है और याद रहती है |
+| **असीमित चैट** ⚠️ | 100 चैट की सीमा हटाता है: `Start` कोई भी संख्या लेता है — खतरनाक, डिफ़ॉल्ट रूप से बंद |
+| **सक्रिय arena.ai खाता हटाएँ** | ब्राउज़र प्रोफ़ाइल और सेशन मिटाता है, यानी लॉग आउट |
+
+सेटिंग्स `~/.arena-model-hunter/config.json` में हैं:
+
+```json
+{ "parallel": false, "lang": "en", "unlimited": false }
+```
+
+⚠️ **असीमित चैट डिफ़ॉल्ट रूप से बंद है और चेतावनी दिखावटी नहीं है।** चालू होने पर `Start` 1–100 के बजाय कोई भी संख्या ले लेता है — `250`, `1000`। हर चैट दो टैब हैं, इसलिए बड़ी संख्या का मतलब है arena.ai पर एक साथ ढेरों अनुरोध: रेट लिमिट और कैप्चा ठीक इसी के लिए हैं, और खाते पर रोक लगने का असली जोखिम है। इसे तभी चालू करें जब आप यह जोखिम स्वीकार करते हों, और सिंगल-थ्रेड मोड रखें; 100 से ऊपर की संख्या पर कुछ भी खुलने से पहले सटीक संख्या के साथ दूसरी पुष्टि माँगी जाती है।
+
+## 🔐 How signing in works
+
+1. A **real** Chromium window opens with a persistent profile (`~/.arena-model-hunter/profile`) — headless browsers are rejected by Cloudflare, so the app never uses one.
+2. You click `Log In` → enter your email → `Continue with email`.
+   - Existing account → enter the password → `Log In`.
+   - New email → the name step can be skipped → a link arrives by mail → paste it into the address bar (`Ctrl+L`, `Ctrl+V`, Enter) → create a password.
+3. The app polls the page every 1.5 s and detects success by: your email appearing in the sidebar, an `arena-auth-*` cookie, and the `Log In` button disappearing.
+4. It saves `session.json` + `state.json` and **closes the browser**.
+
+The site always opens in **dark theme** (the browser is launched with `prefers-color-scheme: dark`, which arena.ai follows).
+
+## ⚡ सिंगल-थ्रेड और मल्टी-थ्रेड
+
+| मोड | कैसे काम करता है | 3 चैट पर मापा गया |
+|---|---|---|
+| **सिंगल-थ्रेड** (डिफ़ॉल्ट) | टैब के जोड़े एक-एक करके संसाधित होते हैं, सक्रिय टैब आगे आता है | ≈7.5 मिनट |
+| **मल्टी-थ्रेड** | सभी टैब जोड़े एक साथ चलते हैं, फ़ोकस नहीं बदला जाता | ≈4.5 मिनट |
+
+मल्टी-थ्रेड में Arena को एक साथ कई अनुरोध मिलते हैं, इसलिए रेट लिमिट और कैप्चा ज़्यादा संभावित हैं। ऐसा हो तो सिंगल-थ्रेड पर लौटें।
+
+## 🗂️ Project structure
+
+```
+arena-model-hunter/
+├── main.py           # menu, settings, scenarios
+├── ui.py             # terminal UI: frame, alt-screen, key reading, resize
+├── arena_login.py    # browser, sign-in, session detection
+├── flow.py           # Arena ↔ lm.ikale.io pipeline, Verify, rename
+├── i18n.py           # UI translations (en / ru / zh)
+├── requirements.txt
+├── run.bat / run.sh
+├── .github/workflows/  # CI: lint + translation checks
+├── LICENSE
+└── docs/i18n/        # this README in 30 languages
+```
+
+## 🌍 Environment variables
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `ARENA_HUNTER_HOME` | `~/.arena-model-hunter` | profile and session folder |
+| `ARENA_HELPER_HOME` | — | old name of the variable, still honoured |
+| `ARENA_EMAIL` / `ARENA_PASSWORD` | — | optional form autofill (never stored) |
+| `ARENA_LOGIN_TIMEOUT` | `900` | seconds to wait for sign-in |
+| `ARENA_URL` | `https://arena.ai/` | start URL |
+
+## 🧰 आम सवाल
+
+- **«Just a moment…» / Cloudflare जाँच** — दिखने वाली ब्राउज़र विंडो ज़रूरी है; बिना डेस्कटॉप वाले सर्वर पर न चलाएँ।
+- **«ब्राउज़र इंस्टॉल नहीं है»** — `python -m playwright install chromium` चलाएँ।
+- **कैप्चा या अनुरोध चुपचाप नहीं भेजे जाते** — संभवतः सीमा लग गई: सिंगल-थ्रेड चालू करें और गति कम करें।
+- **शुरू से करना है** — सेटिंग्स → *सक्रिय arena.ai खाता हटाएँ*, या `~/.arena-model-hunter` हटा दें।
+- **रात भर शिकार** — सेटिंग्स → *असीमित चैट*, फिर «शुरू» में `300` लिखें और पुष्टि करें; सिंगल-थ्रेड रखें और सुबह नाम बदले हुए चैट देखें।
+
+## ⚠️ अस्वीकरण
+
+यह प्रोजेक्ट **व्यक्तिगत प्रयोग और सीखने** के लिए है। यह किसी तीसरे पक्ष की साइट को स्वचालित करता है; स्वचालन arena.ai और फिंगरप्रिंट साइट की सेवा-शर्तों का उल्लंघन कर सकता है और खाते पर रोक लगा सकता है। अपनी ज़िम्मेदारी पर इस्तेमाल करें, अनावश्यक लोड न बनाएँ, संदेह हो तो सिंगल-थ्रेड रखें, और अपने क्रेडेंशियल कभी सार्वजनिक न करें — ऐप पासवर्ड डिस्क पर नहीं सहेजता।
+
+## 📄 लाइसेंस
+
+[MIT](LICENSE) — जो चाहें करें, कोई वारंटी नहीं।
+
+<div align="center">
+
+**[⬆ ऊपर](#-arena-model-hunter) · 🇺🇸 [Read in English](../../../README.md)**
+
+</div>
