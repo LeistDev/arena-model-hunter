@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ arena-model-hunter/
 
 ## 📄 Лиценз
 
-[GNU General Public License v3.0](LICENSE) — свободен софтуер: може да го използвате, изучавате, разпространявате и променяте. Ако разпространявате програмата или променена версия, тя трябва да остане под GPL и изходният код да е отворен. Няма гаранции.
+[MIT](LICENSE) — свободен софтуер: може да го използвате, изучавате, разпространявате и променяте. Ако разпространявате програмата или променена версия, тя трябва да остане под GPL и изходният код да е отворен. Няма гаранции.
 
 Copyright (C) 2026 участниците в arena model hunter.
 

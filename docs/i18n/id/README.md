@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Proyek ini dibuat untuk **eksperimen pribadi dan belajar**. Aplikasi mengotomati
 
 ## 📄 Lisensi
 
-[GNU General Public License v3.0](LICENSE) — perangkat lunak bebas: boleh dipakai, dipelajari, dibagikan, dan diubah. Jika Anda menyebarkan program ini atau versi modifikasinya, program harus tetap di bawah GPL dan kode sumbernya tetap terbuka. Tidak ada jaminan.
+[MIT](LICENSE) — perangkat lunak bebas: boleh dipakai, dipelajari, dibagikan, dan diubah. Jika Anda menyebarkan program ini atau versi modifikasinya, program harus tetap di bawah GPL dan kode sumbernya tetap terbuka. Tidak ada jaminan.
 
 Copyright (C) 2026 para kontributor arena model hunter.
 

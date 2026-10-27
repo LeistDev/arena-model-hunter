@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Il progetto è pensato per **esperimenti personali e apprendimento**. Automatizz
 
 ## 📄 Licenza
 
-[GNU General Public License v3.0](LICENSE) — software libero: puoi usarlo, studiarlo, condividerlo e modificarlo. Se distribuisci il programma o una versione modificata, deve restare sotto GPL e il codice sorgente deve rimanere aperto. Nessuna garanzia.
+[MIT](LICENSE) — software libero: puoi usarlo, studiarlo, condividerlo e modificarlo. Se distribuisci il programma o una versione modificata, deve restare sotto GPL e il codice sorgente deve rimanere aperto. Nessuna garanzia.
 
 Copyright (C) 2026 contributori di arena model hunter.
 

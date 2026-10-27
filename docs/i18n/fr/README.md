@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Ce projet est destiné à des **expérimentations personnelles et à l'apprentis
 
 ## 📄 Licence
 
-[GNU General Public License v3.0](LICENSE) — logiciel libre : vous pouvez l'utiliser, l'étudier, le partager et le modifier. Si vous distribuez le programme ou une version modifiée, il doit rester sous GPL et le code source doit rester ouvert. Aucune garantie.
+[MIT](LICENSE) — logiciel libre : vous pouvez l'utiliser, l'étudier, le partager et le modifier. Si vous distribuez le programme ou une version modifiée, il doit rester sous GPL et le code source doit rester ouvert. Aucune garantie.
 
 Copyright (C) 2026 contributeurs d'arena model hunter.
 

@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Projekt vznikl pro **vlastní experimenty a výuku**. Automatizuje cizí web; au
 
 ## 📄 Licence
 
-[GNU General Public License v3.0](LICENSE) — svobodný software: můžete jej používat, studovat, šířit a měnit. Pokud šíříte program nebo upravenou verzi, musí zůstat pod GPL a zdrojový kód musí zůstat otevřený. Bez záruky.
+[MIT](LICENSE) — svobodný software: můžete jej používat, studovat, šířit a měnit. Pokud šíříte program nebo upravenou verzi, musí zůstat pod GPL a zdrojový kód musí zůstat otevřený. Bez záruky.
 
 Copyright (C) 2026 přispěvatelé arena model hunter.
 

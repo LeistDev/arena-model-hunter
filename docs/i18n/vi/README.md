@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Dự án dành cho **thử nghiệm cá nhân và học tập**. Nó tự độn
 
 ## 📄 Giấy phép
 
-[GNU General Public License v3.0](LICENSE) — phần mềm tự do: bạn có thể dùng, nghiên cứu, chia sẻ và sửa đổi. Nếu phân phối chương trình hoặc bản đã sửa, nó phải tiếp tục theo GPL và mã nguồn phải để mở. Không có bảo hành.
+[MIT](LICENSE) — phần mềm tự do: bạn có thể dùng, nghiên cứu, chia sẻ và sửa đổi. Nếu phân phối chương trình hoặc bản đã sửa, nó phải tiếp tục theo GPL và mã nguồn phải để mở. Không có bảo hành.
 
 Copyright (C) 2026 những người đóng góp cho arena model hunter.
 

@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Este projeto é para **experimentos pessoais e aprendizado**. Ele automatiza um 
 
 ## 📄 Licença
 
-[GNU General Public License v3.0](LICENSE) — software livre: você pode usar, estudar, compartilhar e modificar. Se distribuir o programa ou uma versão modificada, ela deve continuar sob a GPL e o código-fonte deve permanecer aberto. Não há garantias.
+[MIT](LICENSE) — software livre: você pode usar, estudar, compartilhar e modificar. Se distribuir o programa ou uma versão modificada, ela deve continuar sob a GPL e o código-fonte deve permanecer aberto. Não há garantias.
 
 Copyright (C) 2026 colaboradores do arena model hunter.
 

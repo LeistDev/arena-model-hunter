@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -171,7 +171,7 @@ Proiectul este pentru **experimente personale și învățare**. Automatizează 
 
 ## 📄 Licență
 
-[GNU General Public License v3.0](LICENSE) — software liber: poate fi folosit, studiat, distribuit și modificat. Dacă distribui programul sau o versiune modificată, acesta trebuie să rămână sub GPL, iar codul sursă trebuie să rămână deschis. Nu există garanții.
+[MIT](LICENSE) — software liber: poate fi folosit, studiat, distribuit și modificat. Dacă distribui programul sau o versiune modificată, acesta trebuie să rămână sub GPL, iar codul sursă trebuie să rămână deschis. Nu există garanții.
 
 Copyright (C) 2026 contribuitorii arena model hunter.
 

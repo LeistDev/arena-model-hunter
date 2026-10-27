@@ -15,7 +15,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
@@ -184,7 +184,7 @@ This project is for **personal experimentation and education**. It automates a t
 
 ## 📄 License
 
-[GNU General Public License v3.0](LICENSE) — free software: you may use, study, share and modify it. If you distribute it or a modified version, it must stay under the GPL and the source must remain open. There is no warranty.
+[MIT](LICENSE) — free software: you may use, study, share and modify it. If you distribute it or a modified version, it must stay under the GPL and the source must remain open. There is no warranty.
 
 Copyright (C) 2026 arena model hunter contributors.
 
