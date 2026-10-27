@@ -77,7 +77,7 @@ That is the whole point — not automation for its own sake, but **getting a cha
 ## 🚀 Installation
 
 ```bash
-git clone <this-repo> arena-model-hunter
+git clone https://github.com/LeistDev/arena-model-hunter.git
 cd arena-model-hunter
 
 pip install -r requirements.txt

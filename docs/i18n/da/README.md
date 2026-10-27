@@ -70,7 +70,7 @@ I agent-tilstand bestemmer arena.ai selv, hvilken model der svarer — og det er
 ## 🚀 Installation
 
 ```bash
-git clone <this-repo> arena-model-hunter
+git clone https://github.com/LeistDev/arena-model-hunter.git
 cd arena-model-hunter
 
 pip install -r requirements.txt

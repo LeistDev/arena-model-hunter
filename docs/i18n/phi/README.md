@@ -70,7 +70,7 @@ Sa agent mode, ang arena.ai ang nagpapasya kung aling modelo ang sasagot — at 
 ## 🚀 Pag-install
 
 ```bash
-git clone <this-repo> arena-model-hunter
+git clone https://github.com/LeistDev/arena-model-hunter.git
 cd arena-model-hunter
 
 pip install -r requirements.txt

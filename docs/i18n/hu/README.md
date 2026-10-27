@@ -70,7 +70,7 @@ Agent módban az arena.ai dönti el, melyik modell válaszol — és ez koránts
 ## 🚀 Telepítés
 
 ```bash
-git clone <this-repo> arena-model-hunter
+git clone https://github.com/LeistDev/arena-model-hunter.git
 cd arena-model-hunter
 
 pip install -r requirements.txt

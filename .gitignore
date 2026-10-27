@@ -14,5 +14,6 @@ Thumbs.db
 *.swp
 
 # Local run artifacts
-.arena-helper/
+.arena-model-hunter/
+.arena-helper/          # старое имя папки профиля
 *.log

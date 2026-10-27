@@ -70,7 +70,7 @@ Agentin tilassa arena.ai päättää itse, mikä malli vastaa — eikä se ole a
 ## 🚀 Asennus
 
 ```bash
-git clone <this-repo> arena-model-hunter
+git clone https://github.com/LeistDev/arena-model-hunter.git
 cd arena-model-hunter
 
 pip install -r requirements.txt

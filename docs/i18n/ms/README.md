@@ -70,7 +70,7 @@ Dalam mod agent, arena.ai sendiri menentukan model mana yang menjawab — dan ia
 ## 🚀 Pemasangan
 
 ```bash
-git clone <this-repo> arena-model-hunter
+git clone https://github.com/LeistDev/arena-model-hunter.git
 cd arena-model-hunter
 
 pip install -r requirements.txt
