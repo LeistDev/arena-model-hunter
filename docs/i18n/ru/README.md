@@ -1,13 +1,5 @@
 <div align="center">
 
-🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | **🇷🇺 Русский** | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
-
-</div>
-
----
-
-<div align="center">
-
 # ✦ arena model hunter
 
 **Охотник за моделями для arena.ai: гоняет пачку чатов в agent-режиме, снимает отпечаток с каждого ответа, выясняет, какая модель ответила, и переименовывает чат в её честь — утром у вас готовый чат с Claude Opus, GPT-5, Gemini или той нейросетью, которую вы искали.**
@@ -17,27 +9,25 @@
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | **🇷🇺 Русский** | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
 </div>
 
 ---
 
-```
-   +------------------------------------------------------------------+
-   |                                                                  |
-   |  *  arena model hunter                                           |
-   |     arena.ai automation - v1.0.0                                 |
-   |                                                                  |
-   |  o Arena account connected  .  you@example.com                   |
-   |  ~ mode: single-threaded  .  English                             |
-   |                                                                  |
-   |  > Start                                                ready    |
-   |    Settings                                   account & exit     |
-   |    Exit                                                          |
-   |                                                                  |
-   | arrows select    Enter open    q quit                            |
-   |                                                                  |
-   +------------------------------------------------------------------+
-```
+## 🎥 Демо
+
+![arena model hunter demo](../../../demo.gif)
+
+*Инструмент в действии: три фингерпринт-сэмпла на каждый чат, после чего вердикт записывается в название чата.*
+
+---
+
+## ✅ Результат
+
+![renamed chats](../../../results.png)
+
+*Сайдбар Arena после запуска — каждый чат подписан моделью и её уверенностью, например `gpt-6-luna 100.0%`.*
 
 ## 🎯 Зачем это нужно
 

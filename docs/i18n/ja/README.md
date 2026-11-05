@@ -1,13 +1,5 @@
 <div align="center">
 
-🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | **🇯🇵 日本語** | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
-
-</div>
-
----
-
-<div align="center">
-
 # ✦ arena model hunter
 
 **arena.ai のためのモデル探しツール：エージェントモードのチャットをまとめて実行し、各回答の指紋を照合してどのモデルが答えたのかを割り出し、そのモデル名でチャットを改名します。朝には Claude Opus、GPT-5、Gemini、あるいは探していたモデルで動くチャットが、名前付きで残っています。**
@@ -17,27 +9,25 @@
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | **🇯🇵 日本語** | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
 </div>
 
 ---
 
-```
-   +------------------------------------------------------------------+
-   |                                                                  |
-   |  *  arena model hunter                                           |
-   |     arena.ai automation - v1.0.0                                 |
-   |                                                                  |
-   |  o Arena account connected  .  you@example.com                   |
-   |  ~ mode: single-threaded  .  English                             |
-   |                                                                  |
-   |  > Start                                                ready    |
-   |    Settings                                   account & exit     |
-   |    Exit                                                          |
-   |                                                                  |
-   | arrows select    Enter open    q quit                            |
-   |                                                                  |
-   +------------------------------------------------------------------+
-```
+## 🎥 デモ
+
+![arena model hunter demo](../../../demo.gif)
+
+*ツールの実行風景：各チャットに3つのフィンガープリントサンプルを送り、判定結果をチャット名に書き込みます。*
+
+---
+
+## ✅ 結果
+
+![renamed chats](../../../results.png)
+
+*実行後の Arena サイドバー — 各チャットにモデルと信頼度が付きます（例：`gpt-6-luna 100.0%`）。*
 
 ## 🎯 なぜ作ったのか
 

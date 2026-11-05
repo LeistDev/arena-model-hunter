@@ -1,13 +1,5 @@
 <div align="center">
 
-🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | **🇫🇷 Français** | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
-
-</div>
-
----
-
-<div align="center">
-
 # ✦ arena model hunter
 
 **Chasseur de modèles pour arena.ai : lance un lot de discussions en mode agent, empreinte chaque réponse, identifie le modèle qui a répondu et renomme la discussion à son nom — le matin, vous avez une discussion étiquetée propulsée par Claude Opus, GPT-5, Gemini ou celui que vous cherchiez.**
@@ -17,27 +9,25 @@
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | **🇫🇷 Français** | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
 </div>
 
 ---
 
-```
-   +------------------------------------------------------------------+
-   |                                                                  |
-   |  *  arena model hunter                                           |
-   |     arena.ai automation - v1.0.0                                 |
-   |                                                                  |
-   |  o Arena account connected  .  you@example.com                   |
-   |  ~ mode: single-threaded  .  English                             |
-   |                                                                  |
-   |  > Start                                                ready    |
-   |    Settings                                   account & exit     |
-   |    Exit                                                          |
-   |                                                                  |
-   | arrows select    Enter open    q quit                            |
-   |                                                                  |
-   +------------------------------------------------------------------+
-```
+## 🎥 Démo
+
+![arena model hunter demo](../../../demo.gif)
+
+*L'outil en action : trois échantillons de fingerprint par chat, puis le verdict est écrit dans le titre du chat.*
+
+---
+
+## ✅ Résultat
+
+![renamed chats](../../../results.png)
+
+*La barre latérale d'Arena après un run — chaque chat est étiqueté avec le modèle et sa confiance, par exemple `gpt-6-luna 100.0%`.*
 
 ## 🎯 Pourquoi cet outil existe
 

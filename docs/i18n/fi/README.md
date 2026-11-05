@@ -1,13 +1,5 @@
 <div align="center">
 
-🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | **🇫🇮 Suomi** | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
-
-</div>
-
----
-
-<div align="center">
-
 # ✦ arena model hunter
 
 **Mallien metsästäjä arena.ai:lle: ajaa kasan agentti-keskusteluja, ottaa jokaisesta vastauksesta sormenjäljen, selvittää mikä malli vastasi ja nimeää keskustelun sen mukaan — aamulla sinulla on merkitty keskustelu, jota pyörittää Claude Opus, GPT-5, Gemini tai se malli, jota metsästät.**
@@ -17,27 +9,25 @@
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | **🇫🇮 Suomi** | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | [🇰🇷 한국어](../ko/README.md) | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
 </div>
 
 ---
 
-```
-   +------------------------------------------------------------------+
-   |                                                                  |
-   |  *  arena model hunter                                           |
-   |     arena.ai automation - v1.0.0                                 |
-   |                                                                  |
-   |  o Arena account connected  .  you@example.com                   |
-   |  ~ mode: single-threaded  .  English                             |
-   |                                                                  |
-   |  > Start                                                ready    |
-   |    Settings                                   account & exit     |
-   |    Exit                                                          |
-   |                                                                  |
-   | arrows select    Enter open    q quit                            |
-   |                                                                  |
-   +------------------------------------------------------------------+
-```
+## 🎥 Demo
+
+![arena model hunter demo](../../../demo.gif)
+
+*Työkalu toiminnassa: kolme sormenjälkinäytettä jokaiseen chattiin, minkä jälkeen tulos kirjoitetaan chatin nimeen.*
+
+---
+
+## ✅ Tulos
+
+![renamed chats](../../../results.png)
+
+*Arena-sivupalkki ajon jälkeen: jokaisessa chatis on malli ja varmuusaste (esim. `gpt-6-luna 100.0%`).*
 
 ## 🎯 Miksi tämä on olemassa
 

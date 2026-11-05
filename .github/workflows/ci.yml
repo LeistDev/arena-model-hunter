@@ -73,22 +73,21 @@ jobs:
             exit 1
           fi
 
-      - name: Check the screenshot art stays ASCII
+      - name: Check demo assets in READMEs
         run: |
           python - <<'PY'
-          import os, re
+          import os
+          for asset in ("demo.gif", "results.png"):
+              assert os.path.exists(asset), f"{asset} missing from repo root"
           targets = ["README.md"] + [
               os.path.join("docs/i18n", c, "README.md")
               for c in sorted(os.listdir("docs/i18n"))
           ]
           for path in targets:
               text = open(path, encoding="utf-8").read()
-              start = text.index("   +---")
-              block = text[start:text.index("```", start)]
-              assert all(ord(ch) < 128 for ch in block), f"{path}: art is not ASCII"
-              widths = {len(line) for line in block.split("\n") if line}
-              assert widths == {71}, f"{path}: uneven frame {sorted(widths)}"
-          print("screenshot art OK:", len(targets))
+              assert "demo.gif" in text, f"{path}: demo GIF missing"
+              assert "results.png" in text, f"{path}: results screenshot missing"
+          print("demo assets OK:", len(targets))
           PY
 
       - name: Check localized READMEs

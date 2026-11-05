@@ -1,13 +1,5 @@
 <div align="center">
 
-🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | **🇰🇷 한국어** | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
-
-</div>
-
----
-
-<div align="center">
-
 # ✦ arena model hunter
 
 **arena.ai를 위한 모델 사냥꾼: 에이전트 채팅을 여러 개 돌리고, 모든 답변의 지문을 확인해 어떤 모델이 답했는지 알아낸 뒤 그 이름으로 채팅 이름을 바꿉니다. 아침이면 Claude Opus, GPT-5, Gemini 혹은 찾고 있던 모델로 동작하는 채팅이 라벨과 함께 남아 있습니다.**
@@ -17,27 +9,25 @@
 ![UI](https://img.shields.io/badge/UI-terminal-6E56CF)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+🌐 **Available in:** [🇺🇸 English](../../../README.md) | [🇧🇷 Português (Brasil)](../pt-BR/README.md) | [🇪🇸 Español](../es/README.md) | [🇫🇷 Français](../fr/README.md) | [🇮🇹 Italiano](../it/README.md) | [🇷🇺 Русский](../ru/README.md) | [🇨🇳 中文 (简体)](../zh-CN/README.md) | [🇩🇪 Deutsch](../de/README.md) | [🇮🇳 हिन्दी](../in/README.md) | [🇹🇭 ไทย](../th/README.md) | [🇺🇦 Українська](../uk-UA/README.md) | [🇸🇦 العربية](../ar/README.md) | [🇯🇵 日本語](../ja/README.md) | [🇻🇳 Tiếng Việt](../vi/README.md) | [🇧🇬 Български](../bg/README.md) | [🇩🇰 Dansk](../da/README.md) | [🇫🇮 Suomi](../fi/README.md) | [🇮🇱 עברית](../he/README.md) | [🇭🇺 Magyar](../hu/README.md) | [🇮🇩 Bahasa Indonesia](../id/README.md) | **🇰🇷 한국어** | [🇲🇾 Bahasa Melayu](../ms/README.md) | [🇳🇱 Nederlands](../nl/README.md) | [🇳🇴 Norsk](../no/README.md) | [🇵🇹 Português (Portugal)](../pt/README.md) | [🇷🇴 Română](../ro/README.md) | [🇵🇱 Polski](../pl/README.md) | [🇸🇰 Slovenčina](../sk/README.md) | [🇸🇪 Svenska](../sv/README.md) | [🇵🇭 Filipino](../phi/README.md) | [🇨🇿 Čeština](../cs/README.md)
+
 </div>
 
 ---
 
-```
-   +------------------------------------------------------------------+
-   |                                                                  |
-   |  *  arena model hunter                                           |
-   |     arena.ai automation - v1.0.0                                 |
-   |                                                                  |
-   |  o Arena account connected  .  you@example.com                   |
-   |  ~ mode: single-threaded  .  English                             |
-   |                                                                  |
-   |  > Start                                                ready    |
-   |    Settings                                   account & exit     |
-   |    Exit                                                          |
-   |                                                                  |
-   | arrows select    Enter open    q quit                            |
-   |                                                                  |
-   +------------------------------------------------------------------+
-```
+## 🎥 데모
+
+![arena model hunter demo](../../../demo.gif)
+
+*도구 작동 모습: 각 채팅에 지문 샘플 3개를 보내고, 판정 결과를 채팅 제목에 기록합니다.*
+
+---
+
+## ✅ 결과
+
+![renamed chats](../../../results.png)
+
+*실행 후 Arena 사이드바 — 모든 채팅에 모델과 신뢰도가 표시됩니다 (예: `gpt-6-luna 100.0%`).*
 
 ## 🎯 왜 만들었나
 
